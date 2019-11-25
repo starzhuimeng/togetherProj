@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "statusbar": "red",
+  "bounce": "none",
+  "titleNView": false,
+  "usingComponents": {
+    "search": "/components/mehaotian-search/mehaotian-search",
+    "tab": "/components/sun-tab/sun-tab"
+  }
+}

@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"status_bar { height: var(--status-bar-height); width: 100%; }\n.",[1],"swiperItem{ height: ",[0,1000],"; overflow: scroll; }\n.",[1],"fixed{ position: relative; top: 0; }\n",],undefined,{path:"./pages/index/index.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/index.wxml') } }));

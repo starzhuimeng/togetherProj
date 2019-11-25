@@ -1,0 +1,15 @@
+
+.status_bar {
+    height: var(--status-bar-height);
+    width: 100%;
+}
+.swiperItem{
+		height: 1000rpx;
+		overflow: scroll;
+}
+.fixed{
+	position: relative;
+	top: 0;
+}
+
+
