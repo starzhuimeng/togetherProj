@@ -1,11 +1,10 @@
 <template>
 	<view>
-		<search></search>
+		搜索页
 	</view>
 </template>
 
 <script>
-	import search from "../../components/jm-search/jm-search.vue"
 	export default {
 		data() {
 			return {
@@ -16,7 +15,6 @@
 			
 		},
 		components:{
-			search:search
 		}
 	}
 </script>

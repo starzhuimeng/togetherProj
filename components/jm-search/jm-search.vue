@@ -99,7 +99,6 @@
 
 	.searchTopBox {
 		width: 100%;
-		background-color: #0b877f;
 		height: 100upx;
 		box-sizing: border-box;
 		padding-top: 15upx;
@@ -107,8 +106,8 @@
 
 	.searchBoxRadius {
 		width: 90%;
-		height: 70upx;
-		background-color: #fff;
+		height: 44upx;
+		background-color: #ccc;
 		margin-left: 5%;
 		overflow: hidden;
 		border-radius: 35upx;
@@ -122,10 +121,11 @@
 	}
 
 	.searchBoxIpt {
-		height: 70upx;
-		line-height: 70upx;
+		height: 44upx;
+		line-height: 44upx;
 		margin-left: 20upx;
 		float: left;
+		background: #ccc;
 	}
 
 	.searchBotBox {

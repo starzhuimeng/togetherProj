@@ -13,10 +13,15 @@
 				<label>验证码:</label>
 				<input  type="text" v-model="vcode" value="" placeholder="请输入图上的验证码" />
 				<view @click="changeVcode" id="vcode" class="">
-					
+					<image v-bind:src="vcodeUrl" style="width: 100%;height: 100%;"></image>
 				</view>
 			</view>
+			
+			<view class="btn">
+				<button @click="complate" type="primary">登录</button>
+			</view>
 		</view>
+		
 		<view class="btns">
 			
 		</view>
@@ -27,9 +32,11 @@
 	export default {
 		data() {
 			return {
+				id:0,
 				phone:"",//手机号inputValue
 				pass:"",//密码inputValue
-				vcode:""//验证码inputValue
+				vcode:"",//验证码inputValue
+				vcodeUrl:"http://localhost:8080/yiqiba/getVerify?id="+this.id
 			};
 		},
 		methods:{
@@ -52,7 +59,18 @@
 				})
 			},
 			changeVcode(){
-				console.log("vcode")
+				var id = this.id+1;
+				this.vcodeUrl += id;
+			},
+			complate(){
+				if(this.phone == "root" && this.pass == "root" && this.vcode == "0000"){
+					console.log("欢迎您管理员");
+					uni.navigateTo({
+						url:'../../pages/index/index'
+					})
+				}else{
+					console.log("用户名或密码错")
+				}
 			}
 		}
 	}
@@ -86,9 +104,13 @@
 		font-size: 30upx;
 	}
 	#vcode{
-		flex: 4;
-		background: #0077AA;
-		height: 40upx;
+		width: 100upx;
+		height: 50upx;
 	}
-	
+	#loginbtn{
+		width: 100%;
+	}
+	.btn{
+		margin: 40upx;
+	}
 </style>

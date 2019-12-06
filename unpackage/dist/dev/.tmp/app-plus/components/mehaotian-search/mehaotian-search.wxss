@@ -103,7 +103,7 @@
       padding: 0 30rpx;
       background: #4cd964;
       line-height: 60rpx;
-      color: #fff;
+      color: #07a2f2;
       border-left: 1px #ccc solid;
       -webkit-transition: all 0.3s;
       -o-transition: all 0.3s;

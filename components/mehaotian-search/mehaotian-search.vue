@@ -57,6 +57,9 @@ export default {
 	methods: {
 		focus() {
 			this.active = true;
+			uni.navigateTo({
+				url:"../../pages/search/search"
+			})
 		},
 		blur() {
 			this.isFocus = false;

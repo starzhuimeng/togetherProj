@@ -9,6 +9,8 @@
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	padding: 15px;
 }
 .content .form-item{
@@ -48,16 +50,16 @@
 	
 	font-size: 30rpx;
 }
-#vcode{
+#vcodebtn{
 	-webkit-box-flex: 4;
 	-webkit-flex: 4;
 	    -ms-flex: 4;
 	        flex: 4;
-	background: #0077AA;
-	height: 40rpx;
-}
-#loginbtn{
-	width: 100%;
+	border: 1rpx solid #666;
+	font-size: 24rpx;
+	color: #666;
+	padding: 10rpx 0rpx;
+	text-align: center;
 }
 .btn{
 	margin: 40rpx;

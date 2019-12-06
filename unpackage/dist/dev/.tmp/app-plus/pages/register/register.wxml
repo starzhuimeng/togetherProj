@@ -1,1 +1,1 @@
-<view></view>
+<view><regi vue-id="1" bind:__l="__l"></regi></view>
