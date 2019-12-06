@@ -42,6 +42,7 @@
 		methods:{
 			login(){//用户点击登录调用login方法
 			//1.发送post请求，参数为以上input中的value
+				
 				uni.request({
 					method:"POST",
 					url:"",
