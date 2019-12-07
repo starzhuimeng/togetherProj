@@ -2,23 +2,23 @@
 	<view>
 		<view class="content">
 			<view class="form-item">
-				<label>用户名:</label>
-				<input id="phone" type="text" v-model="phone" value="" placeholder="请输入您的手机号" />
+				<label class="label">用户名:</label>
+				<input class="input" type="text" v-model="phone" value="" placeholder="请输入您的手机号" />
 			</view>
 			<view class="form-item">
-				<label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
-				<input id="pass" type="text" v-model="pass" value="" placeholder="请输入您的密码" />
+				<label class="label">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+				<input class="input" type="text" v-model="pass" value="" placeholder="请输入您的密码" />
 			</view>
 			<view class="form-item">
-				<label>验证码:</label>
-				<input  type="text" v-model="vcode" value="" placeholder="请输入图上的验证码" />
-				<view @click="changeVcode" id="vcode" class="">
+				<label class="label">验证码:</label>
+				<input class="input" type="text" v-model="vcode" value="" placeholder="请输入图上的验证码" />
+				<view @click="changeVcode" class="">
 					<image v-bind:src="vcodeUrl" style="width: 100%;height: 100%;"></image>
 				</view>
 			</view>
 			
 			<view class="btn">
-				<button @click="complate" type="primary">登录</button>
+				<button @click="login()" type="primary">登录</button>
 			</view>
 		</view>
 		
@@ -42,20 +42,26 @@
 		methods:{
 			login(){//用户点击登录调用login方法
 			//1.发送post请求，参数为以上input中的value
-				
 				uni.request({
 					method:"POST",
-					url:"",
+					url:"http://localhost:8080/yiqiba/login",
 					data:{
-						phone:this.phone,
-						pass:this.pass,
-						vcode:this.vcode
+						account:this.phone,
+						upass:this.pass,
 					},
 					success(val) {
-						console.log(val)
+						uni.showToast({
+							icon:"none",
+							title:"success",
+							duration:1500
+						})
 					},
 					fail(e) {
-						console.log(e)
+						uni.showToast({
+							icon:"none",
+							title:"faild",
+							duration:1500
+						})
 					}
 				})
 			},
@@ -64,15 +70,11 @@
 				this.vcodeUrl += id;
 			},
 			complate(){
-				if(this.phone == "root" && this.pass == "root" && this.vcode == "0000"){
-					console.log("欢迎您管理员");
-					uni.navigateTo({
-						url:'../../pages/index/index'
-					})
-				}else{
-					console.log("用户名或密码错")
-				}
+				
 			}
+		},
+		computed:{
+			
 		}
 	}
 </script>
@@ -81,22 +83,22 @@
 	.content{
 		display: flex;
 		flex-direction: column;
-		padding: 15px;
+		padding: 50upx;
 	}
-	.content .form-item{
+	.form-item{
 		display: flex;
 		align-items: center; 	
 		padding: 30upx 10upx;
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	.content .form-item label{
+	.label{
 		text-align: center;
 		width: 150upx;
 		font-size: 30upx;
 		color: #666;
 	}
-	.content .form-item input{
+	.input{
 		color: #666;
 		border-bottom: 1px solid #ccc;
 		flex: 8;
@@ -104,11 +106,11 @@
 		
 		font-size: 30upx;
 	}
-	#vcode{
+	.vcode{
 		width: 100upx;
 		height: 50upx;
 	}
-	#loginbtn{
+	.loginbtn{
 		width: 100%;
 	}
 	.btn{
