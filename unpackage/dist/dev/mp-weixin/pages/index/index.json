@@ -1,4 +1,8 @@
 {
-  "navigationBarBackgroundColor": "#00c170",
-  "usingComponents": {}
+  "navigationStyle": "custom",
+  "statusbar": "red",
+  "usingComponents": {
+    "search": "/components/mehaotian-search/mehaotian-search",
+    "tab": "/components/sun-tab/sun-tab"
+  }
 }

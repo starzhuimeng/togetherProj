@@ -1,6 +1,16 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/protype/protype",
+    "pages/choice/choice",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/condition/condition",
+    "pages/newproj/newproj",
+    "pages/message/message",
+    "pages/mine/mine",
+    "pages/losepass/losepass"
   ],
   "subPackages": [],
   "window": {

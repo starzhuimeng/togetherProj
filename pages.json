@@ -2,6 +2,16 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		
 		{
+			"path": "pages/protype/protype",
+			"style": {
+				"navigationBarTitleText": "选择发起类型"
+			}
+		},{
+				"path": "pages/choice/choice",
+				"style": {
+				"navigationBarTitleText": "我支持的项目"
+				}
+		},{
 		    "path" : "pages/login/login",
 		    "style" : {
 				"navigationBarTextStyle":"black",

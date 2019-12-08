@@ -1,0 +1,67 @@
+
+.content{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 15px;
+}
+.content .form-item{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center; 	
+	padding: 30rpx 10rpx;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.content .form-item label{
+	text-align: center;
+	width: 150rpx;
+	font-size: 30rpx;
+	color: #666;
+}
+.content .form-item input{
+	color: #666;
+	border-bottom: 1px solid #ccc;
+	-webkit-box-flex: 8;
+	-webkit-flex: 8;
+	    -ms-flex: 8;
+	        flex: 8;
+	padding: 5rpx 20rpx;
+	
+	font-size: 30rpx;
+}
+#vcodebtn{
+	-webkit-box-flex: 4;
+	-webkit-flex: 4;
+	    -ms-flex: 4;
+	        flex: 4;
+	border: 1rpx solid #666;
+	font-size: 24rpx;
+	color: #666;
+	padding: 10rpx 0rpx;
+	text-align: center;
+}
+.btn{
+	margin: 40rpx;
+}
+

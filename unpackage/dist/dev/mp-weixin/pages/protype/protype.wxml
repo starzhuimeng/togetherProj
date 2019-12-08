@@ -1,0 +1,1 @@
+<view><plate vue-id="1" bind:__l="__l"></plate></view>
