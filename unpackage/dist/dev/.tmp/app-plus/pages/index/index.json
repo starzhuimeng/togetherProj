@@ -5,6 +5,7 @@
   "titleNView": false,
   "usingComponents": {
     "search": "/components/mehaotian-search/mehaotian-search",
-    "tab": "/components/sun-tab/sun-tab"
+    "suntab": "/components/sun-tab/sun-tab",
+    "indexcardview": "/components/indexcardview"
   }
 }

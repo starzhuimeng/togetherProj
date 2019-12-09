@@ -35,7 +35,6 @@
     },
     "popGesture": "close",
     "launchwebview": {
-      "render": "always",
       "id": "1",
       "kernel": "WKWebview",
       "uni-app": "auto"
@@ -85,6 +84,12 @@
     },
     "arguments": "{\"name\":\"\",\"path\":\"\",\"query\":\"\",\"id\":0}",
     "allowsInlineMediaPlayback": true,
+    "safearea": {
+      "background": "#ffffff",
+      "bottom": {
+        "offset": "auto"
+      }
+    },
     "uni-app": {
       "compilerVersion": "2.4.2",
       "control": "v8",
@@ -93,6 +98,49 @@
       "nvue": {
         "flex-direction": "column"
       }
+    },
+    "tabBar": {
+      "color": "#8a8a8a",
+      "selectedColor": "#049ff1",
+      "borderStyle": "#ccc",
+      "backgroundColor": "#ffffff",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "static/tab-icons/home.png",
+          "selectedIconPath": "static/tab-icons-active/home.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/condition/condition",
+          "iconPath": "static/tab-icons/play-circle-fill.png",
+          "selectedIconPath": "static/tab-icons-active/play-circle-fill.png",
+          "text": "动态"
+        },
+        {
+          "pagePath": "pages/API/index",
+          "iconPath": "static/tab-icons/add.png",
+          "selectedIconPath": "static/tab-icons-active/add.png",
+          "text": "添加项目"
+        },
+        {
+          "pagePath": "pages/message/message",
+          "iconPath": "static/tab-icons/xiaoxi.png",
+          "selectedIconPath": "static/tab-icons-active/xiaoxi.png",
+          "text": "消息"
+        },
+        {
+          "pagePath": "pages/mine/mine",
+          "iconPath": "static/tab-icons/mine.png",
+          "selectedIconPath": "static/tab-icons-active/mine.png",
+          "text": "个人中心"
+        }
+      ],
+      "height": "50px",
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
     }
   }
 }

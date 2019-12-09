@@ -4,8 +4,8 @@
     width: 100%;
 }
 .swiperItem{
-		height: 1000rpx;
-		overflow: scroll;
+		/* overflow: scroll; */
+		max-height: 1236rpx;
 }
 .fixed{
 	position: relative;

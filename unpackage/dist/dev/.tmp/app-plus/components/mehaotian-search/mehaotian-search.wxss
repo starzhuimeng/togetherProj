@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.search.data-v-c7ce983e {
+.search.data-v-57f08d4b {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,7 +37,7 @@
   font-size: 28rpx;
   background: #fff;
 }
-.search .content.data-v-c7ce983e {
+.search .content.data-v-57f08d4b {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -47,6 +47,8 @@
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    border-radius: 30rpx;
+    border: 2rpx solid #000000;
     height: 60rpx;
     border: 1px #ccc solid;
     background: #fff;
@@ -56,7 +58,7 @@
     transition: all 0.2s linear;
     border-radius: 30px;
 }
-.search .content .content-box.data-v-c7ce983e {
+.search .content .content-box.data-v-57f08d4b {
       width: 100%;
       display: -webkit-box;
       display: -webkit-flex;
@@ -67,19 +69,19 @@
           -ms-flex-align: center;
               align-items: center;
 }
-.search .content .content-box.center.data-v-c7ce983e {
+.search .content .content-box.center.data-v-57f08d4b {
         -webkit-box-pack: center;
         -webkit-justify-content: center;
             -ms-flex-pack: center;
                 justify-content: center;
 }
-.search .content .content-box .icon.data-v-c7ce983e {
+.search .content .content-box .icon.data-v-57f08d4b {
         padding: 0 15rpx;
 }
-.search .content .content-box .icon.icon-del.data-v-c7ce983e {
+.search .content .content-box .icon.icon-del.data-v-57f08d4b {
           font-size: 38rpx;
 }
-.search .content .content-box .input.data-v-c7ce983e {
+.search .content .content-box .input.data-v-57f08d4b {
         width: 100%;
         max-width: 100%;
         line-height: 60rpx;
@@ -88,14 +90,14 @@
         -o-transition: all 0.2s linear;
         transition: all 0.2s linear;
 }
-.search .content .content-box .input.center.data-v-c7ce983e {
+.search .content .content-box .input.center.data-v-57f08d4b {
           width: 200rpx;
 }
-.search .content .content-box .input.sub.data-v-c7ce983e {
+.search .content .content-box .input.sub.data-v-57f08d4b {
           width: auto;
           color: grey;
 }
-.search .content .searchBtn.data-v-c7ce983e {
+.search .content .searchBtn.data-v-57f08d4b {
       height: 100%;
       -webkit-flex-shrink: 0;
           -ms-flex-negative: 0;
@@ -103,13 +105,13 @@
       padding: 0 30rpx;
       background: #4cd964;
       line-height: 60rpx;
-      color: #07a2f2;
+      color: #1e9fff;
       border-left: 1px #ccc solid;
       -webkit-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s;
 }
-.search .button.data-v-c7ce983e {
+.search .button.data-v-57f08d4b {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -133,15 +135,21 @@
     white-space: nowrap;
     overflow: hidden;
 }
-.search .button.active.data-v-c7ce983e {
+.search .button.active.data-v-57f08d4b {
       padding-left: 15rpx;
       width: 100rpx;
+}
+.button-item.data-v-57f08d4b {
+  color: #000000;
+}
+.button-item.data-v-57f08d4b:active {
+  color: #1e9fff;
 }
 @font-face {
   font-family: 'iconfont';
   src: url("https://at.alicdn.com/t/font_989023_efq0mtli526.ttf") format("truetype");
 }
-.icon.data-v-c7ce983e {
+.icon.data-v-57f08d4b {
   font-family: iconfont;
   font-size: 32rpx;
   font-style: normal;

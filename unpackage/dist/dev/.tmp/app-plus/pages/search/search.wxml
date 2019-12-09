@@ -1,1 +1,1 @@
-<view>搜索页</view>
+<view><search vue-id="1" radius="30upx" border="1upx solid #999" bind:__l="__l"></search></view>

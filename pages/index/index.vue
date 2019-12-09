@@ -8,9 +8,9 @@
 			<!-- <swiper>
 				<swiper-item v-for=""></swiper-item>
 			</swiper> -->
-			<tab :value.sync="current"  :tabList="tabObjectList" rangeKey="name"></tab>
+			<suntab :value.sync="current"  :tabList="tabObjectList" rangeKey="name"></suntab>
 		</view>
-		<scroll-view class="swiperItem" scroll-y="true">
+		<scroll-view show-scrollbar=false class="swiperItem" scroll-y="true">
 			<view>
 				<indexcardview v-for="(item,index) in list">{{item}}</indexcardview>
 			</view>
@@ -78,8 +78,8 @@
 		
 		components:{
 			search:search,
-			tab:suntab,
-			indexcardview:indexcardview
+			suntab:suntab,
+			indexcardview:indexcardview,
 		}
 		
 		
@@ -94,8 +94,8 @@
 	    width: 100%;
 	}
 	.swiperItem{
-			overflow: scroll;
-			max-height: 1100upx;
+			/* overflow: scroll; */
+			max-height: 1236upx;
 	}
 	.fixed{
 		position: relative;

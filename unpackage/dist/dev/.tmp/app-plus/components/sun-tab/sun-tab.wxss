@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.uni-tab.data-v-3ac8aeaa {
+.uni-tab.data-v-44b02ed6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -35,7 +35,7 @@
   line-height: 44px;
   background-color: #fff;
 }
-.uni-tab .uni-tab-item.data-v-3ac8aeaa {
+.uni-tab .uni-tab-item.data-v-44b02ed6 {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -46,37 +46,37 @@
             box-sizing: border-box;
     overflow: hidden;
 }
-.uni-tab .uni-tab-scroll-item.data-v-3ac8aeaa {
+.uni-tab .uni-tab-scroll-item.data-v-44b02ed6 {
     -webkit-box-flex: 0;
     -webkit-flex: none;
         -ms-flex: none;
             flex: none;
     padding: 0px 12px;
 }
-.uni-tab .uni-tab-active.data-v-3ac8aeaa {
+.uni-tab .uni-tab-active.data-v-44b02ed6 {
     color: #1e9fff;
 }
-.uni-tab .uni-tab-scroll-active.data-v-3ac8aeaa {
+.uni-tab .uni-tab-scroll-active.data-v-44b02ed6 {
     border-bottom: 3px solid #1e9fff;
 }
-.uni-tab .uni-tab-bar.data-v-3ac8aeaa {
+.uni-tab .uni-tab-bar.data-v-44b02ed6 {
     display: block;
     height: 3px;
     position: absolute;
     bottom: 0;
     border-bottom: 3px solid #1e9fff;
 }
-.uni-tab .uni-tab-bar-forward.data-v-3ac8aeaa {
+.uni-tab .uni-tab-bar-forward.data-v-44b02ed6 {
     -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
     -o-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
     transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
 }
-.uni-tab .uni-tab-bar-backward.data-v-3ac8aeaa {
+.uni-tab .uni-tab-bar-backward.data-v-44b02ed6 {
     -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
     -o-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
     transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
 }
-.uni-scroll-tab.data-v-3ac8aeaa {
+.uni-scroll-tab.data-v-44b02ed6 {
   overflow-x: scroll;
 }
 

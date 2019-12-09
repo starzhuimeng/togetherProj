@@ -9,9 +9,9 @@
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	padding: 15px;
+	padding: 50rpx;
 }
-.content .form-item{
+.form-item{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -31,13 +31,13 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
-.content .form-item label{
+.label{
 	text-align: center;
 	width: 150rpx;
 	font-size: 30rpx;
 	color: #666;
 }
-.content .form-item input{
+.input{
 	color: #666;
 	border-bottom: 1px solid #ccc;
 	-webkit-box-flex: 8;
@@ -48,15 +48,11 @@
 	
 	font-size: 30rpx;
 }
-#vcode{
-	-webkit-box-flex: 4;
-	-webkit-flex: 4;
-	    -ms-flex: 4;
-	        flex: 4;
-	background: #0077AA;
-	height: 40rpx;
+.vcode{
+	width: 100rpx;
+	height: 50rpx;
 }
-#loginbtn{
+.loginbtn{
 	width: 100%;
 }
 .btn{
