@@ -4,53 +4,55 @@
 		          <!-- 这里是状态栏 -->
 		</view>
 		<view class="fixed">
-			<search></search>
+			<search radius="30upx" @tap="clicked" border="1upx solid #999"></search>
 			<!-- <swiper>
 				<swiper-item v-for=""></swiper-item>
 			</swiper> -->
 			<tab :value.sync="current"  :tabList="tabObjectList" rangeKey="name"></tab>
 		</view>
-		<swiper class="swiperItem" :indicator-dots="false" :autoplay="false" disable-programmatic-animation="true" v-bind:current="current" @change="change" :duration="500" >
-			<swiper-item  v-for="(item,index) in tabObjectList">
-				
-			</swiper-item>
-		</swiper>
+		<scroll-view class="swiperItem" scroll-y="true">
+			<view>
+				<indexcardview v-for="(item,index) in list">{{item}}</indexcardview>
+			</view>
+		</scroll-view>
 	</view>
 </template>
 
 <script>
 	import search from "../../components/mehaotian-search/mehaotian-search.vue"
 	import suntab from "../../components/sun-tab/sun-tab.vue"
+	import indexcardview from "../../components/indexcardview.vue"
 	export default {
 		data() {
 			return {
 				current:0,
 				tabObjectList: [ //对象数组赋值
-				                    {
-				                        name: '精选',
-				                        value: 1
-				                    },
-				                    {
-				                        name: '住宿',
-				                        value: 1
-				                    },
-									{
-									    name: '餐饮',
-									    value: 1
-									},
-									{
-									    name: '农业',
-									    value: 1
-									},
-									{
-									    name: '开店',
-									    value: 1
-									}
-				                ],
+				    {
+				        name: '精选',
+				        value: 1
+				    },
+				    {
+				        name: '住宿',
+				        value: 1
+				    },
+					{
+					    name: '餐饮',
+					    value: 1
+					},
+					{
+					    name: '农业',
+					    value: 1
+					},
+					{
+					    name: '开店',
+					    value: 1
+					}
+				],
+				list:[1,2,3,4]
+								
 			}
 		},
 		onLoad() {
-
 		},
 		methods: {
 			arrayChange(e){
@@ -64,16 +66,25 @@
 			change(e){
 				this.current = e.detail.current;
 				console.log("current:"+this.current)
-			}
+			},
+			focus(e){
+				console.log(e)
+			},
+			clicked(){
+				console.log(1)
+				console.log(this.$refs)
+			}	
 		},
 		
 		components:{
 			search:search,
-			tab:suntab
+			tab:suntab,
+			indexcardview:indexcardview
 		}
 		
 		
 	}
+	 
 </script>
 
 <style>
@@ -83,8 +94,8 @@
 	    width: 100%;
 	}
 	.swiperItem{
-			height: 1000upx;
 			overflow: scroll;
+			max-height: 1100upx;
 	}
 	.fixed{
 		position: relative;

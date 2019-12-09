@@ -73,7 +73,15 @@
     },
     "h5" : {
         "router" : {
-            "base" : "8088"
+            "base" : ""
+        },
+        "devServer" : {
+            "port" : 8088
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
         }
     }
 }

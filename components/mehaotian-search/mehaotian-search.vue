@@ -42,7 +42,7 @@ export default {
 			type: String,
 			default: '#fff'
 		},
-		border: { type: String, default: '1px #f5f5f5 solid' }
+		border: { type: String, default: '1px #f5f5f5 solid'},
 		
 	},
 	data() {
@@ -57,9 +57,10 @@ export default {
 	methods: {
 		focus() {
 			this.active = true;
-			uni.navigateTo({
-				url:"../../pages/search/search"
-			})
+			this.$emit("clicked")
+			// uni.navigateTo({
+			// 	url:"../../pages/search/search"
+			// })
 		},
 		blur() {
 			this.isFocus = false;
@@ -108,6 +109,8 @@ export default {
 		display: flex;
 		align-items: center;
 		width: 100%;
+		border-radius: 30upx;
+		border:2upx solid #000000;
 		height: 60upx;
 		border: 1px #ccc solid;
 		background: #fff;
@@ -150,7 +153,7 @@ export default {
 			padding: 0 30upx;
 			background: $uni-color-success;
 			line-height: 60upx;
-			color: #07a2f2;
+			color: #1e9fff;
 			border-left: 1px #ccc solid;
 			transition: all 0.3s;
 		}
@@ -171,6 +174,12 @@ export default {
 			width: 100upx;
 		}
 	}
+}
+.button-item{
+	color: #000000;
+}
+.button-item:active{
+	color: #1e9fff;
 }
 @font-face {
 	font-family: 'iconfont';

@@ -1,10 +1,11 @@
 <template>
 	<view>
-		搜索页
+		<search radius="30upx" border="1upx solid #999"></search>
 	</view>
 </template>
 
 <script>
+	import search from "../../components/mehaotian-search/mehaotian-search.vue"
 	export default {
 		data() {
 			return {
@@ -15,6 +16,7 @@
 			
 		},
 		components:{
+			search:search
 		}
 	}
 </script>

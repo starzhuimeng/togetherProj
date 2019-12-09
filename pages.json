@@ -2,6 +2,17 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		
 		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle":"custom",
+				
+				"app-plus": {
+				    "bounce": "none",
+				    "titleNView": false
+				},
+				"statusbar":"red"
+			}
+		},{
 			"path": "pages/protype/protype",
 			"style": {
 				"navigationBarTitleText": "选择发起类型"
@@ -21,17 +32,6 @@
 		    "path" : "pages/search/search",
 		    "style" : {
 				"navigationStyle":"custom"
-			}
-		},{
-			"path": "pages/index/index",
-			"style": {
-				"navigationStyle":"custom",
-				
-				"app-plus": {
-				    "bounce": "none",
-				    "titleNView": false
-				},
-				"statusbar":"red"
 			}
 		},{
             "path" : "pages/register/register",
