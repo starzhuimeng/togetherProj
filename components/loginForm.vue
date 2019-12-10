@@ -3,15 +3,15 @@
 		<view class="content">
 			<view class="form-item">
 				<label class="label">用户名:</label>
-				<input class="input" type="text" v-model="phone" value="" placeholder="请输入您的手机号" />
+				<input class="input" maxlength="11" type="number" v-model="phone" value="" placeholder="请输入您的手机号" />
 			</view>
 			<view class="form-item">
 				<label class="label">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
-				<input class="input" type="text" v-model="pass" value="" placeholder="请输入您的密码" />
+				<input class="input" type="text" maxlength="16" password="true" v-model="pass" value="" placeholder="请输入您的密码" />
 			</view>
 			<view class="form-item">
 				<label class="label">验证码:</label>
-				<input class="input" type="text" v-model="vcode" value="" placeholder="请输入图上的验证码" />
+				<input class="input" maxlength="4" type="text" v-model="vcode" value="" placeholder="请输入图上的验证码" />
 				<view @click="changeVcode" class="vcode">
 					<image v-bind:src="vcodeUrl" style="width: 100%;height: 100%;"></image>
 				</view>

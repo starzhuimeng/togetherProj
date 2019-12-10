@@ -3,31 +3,31 @@
 		<view class="content">
 			<view class="form-item">
 				<label>昵&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
-				<input id="phone" type="text" v-model="phone" value="" placeholder="请输入您的手机号" />
+				<input id="phone" type="text" v-model="uname" maxlength="16" value="" placeholder="请输入您的称呼" />
 				
 			</view>
 			<view class="form-item">
 				<label>手机号:</label>
-				<input id="pass" type="text" v-model="pass" value="" placeholder="请输入您的密码" />
-				<view @click="putVcode" id="vcodebtn" class="">
-					获取验证码
+				<input id="pass" type="number" v-model="phone" maxlength="11" value="" placeholder="请输入您的手机号" />
+				<view @click.once="putPhoneCode" id="" class="vcodebtn">
+					{{phoneCodeVal}}
 				</view>
 			</view>
 			<view class="form-item">
 				<label>验证码:</label>
-				<input id="phone" type="text" v-model="phone" value="" placeholder="请输入获取的验证码" />
+				<input class="phone" type="number" maxlength="6" v-model="pnonecode" value="" placeholder="请输入获取的验证码" />
 				
 			</view>
 			<view class="form-item">
 				<label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
-				<input id="phone" type="text" v-model="phone" value="" placeholder="请输入您的密码" />
+				<input class="phone" type="text" v-model="pass" value="" placeholder="请输入您的密码" />
 				
 			</view>
 			<view class="form-item">
 				<label>验证码:</label>
 				<input  type="text" v-model="vcode" value="" placeholder="请输入图上的验证码" />
-				<view @click="changeVcode" id="vcode" class="">
-					
+				<view @click="changeVcode" class="vcode">
+					<image v-bind:src="vcodeUrl" style="width: 100%;height: 100%;"></image>
 				</view>
 			</view>
 		</view>
@@ -41,9 +41,13 @@
 	export default {
 		data() {
 			return {
+				uname:"",
 				phone:"",//手机号inputValue
 				pass:"",//密码inputValue
-				vcode:""//验证码inputValue
+				vcode:"",//验证码inputValue
+				phonecode:"",//手机验证码
+				vcodeUrl:this.$global.serverPath+"/yiqiba/getVerify?id="+this.id,
+				phoneCodeVal:"获取验证码"
 			};
 		},
 		methods:{
@@ -55,7 +59,8 @@
 					data:{
 						phone:this.phone,
 						pass:this.pass,
-						vcode:this.vcode
+						vcode:this.vcode,
+						
 					},
 					success(val) {
 						console.log(val)
@@ -65,12 +70,61 @@
 					}
 				})
 			},
-			putVcode(){
-				console.log("putVcode")
+			putPhoneCode(){
+				uni.request({
+					method:"GET",
+					url:this.$global.serverPath+"/yiqiba/PhoneVerify",
+					data:{
+						account:this.uname
+					},
+					success: (req) => {
+						console.log(req.data)
+						var second = 60
+						var timer = setInterval(()=>{
+							if(second > 0){
+								second -= 1
+								this.phoneCodeVal = second + "s"
+								console.log(second)
+							}else{
+								this.phoneCodeVal = "重新发送"
+								clearInterval(timer)
+							}
+							
+							
+						},1000)
+					},
+					fail: (req) => {
+						console.log(req)
+						uni.showToast({
+							title: '发送失败，请重新发送',
+							success: (e) => {
+								this.phoneCodeVal = "重新发送"
+							}
+						});
+					}
+				})
 			},
 			complate(){
-				console.log('complate')
-			}
+				uni.request({
+					method:"GET",
+					url:this.$global.serverPath + "/yiqiba/reg",
+					data:{
+						usersData:{
+							
+						}
+					},
+					success: (req) => {
+						console.log(req)
+					},
+					fail: (req) => {
+						console.log(req)
+					}
+				})
+			},
+			changeVcode(){
+				var id = this.id+1;
+				this.vcodeUrl += id;
+			},
 		}
 	}
 </script>
@@ -82,20 +136,20 @@
 		box-sizing: border-box;
 		padding: 15px;
 	}
-	.content .form-item{
+	.form-item{
 		display: flex;
 		align-items: center; 	
 		padding: 30upx 10upx;
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	.content .form-item label{
+	.form-item label{
 		text-align: center;
 		width: 150upx;
 		font-size: 30upx;
 		color: #666;
 	}
-	.content .form-item input{
+	.form-item input{
 		color: #666;
 		border-bottom: 1px solid #ccc;
 		flex: 8;
@@ -103,7 +157,7 @@
 		
 		font-size: 30upx;
 	}
-	#vcodebtn{
+	.vcodebtn{
 		flex: 4;
 		border: 1upx solid #666;
 		font-size: 24upx;
@@ -111,11 +165,11 @@
 		padding: 10upx 0upx;
 		text-align: center;
 	}
-	#vcode{
-		flex: 4;
-		background: #0077AA;
-		height: 40upx;
+	.vcode{
+		width: 100upx;
+		height: 50upx;
 	}
+	
 	.btn{
 		margin: 40upx;
 	}

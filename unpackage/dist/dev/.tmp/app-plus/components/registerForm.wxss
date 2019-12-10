@@ -13,7 +13,7 @@
 	        box-sizing: border-box;
 	padding: 15px;
 }
-.content .form-item{
+.form-item{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -33,13 +33,13 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
-.content .form-item label{
+.form-item label{
 	text-align: center;
 	width: 150rpx;
 	font-size: 30rpx;
 	color: #666;
 }
-.content .form-item input{
+.form-item input{
 	color: #666;
 	border-bottom: 1px solid #ccc;
 	-webkit-box-flex: 8;
@@ -50,7 +50,7 @@
 	
 	font-size: 30rpx;
 }
-#vcodebtn{
+.vcodebtn{
 	-webkit-box-flex: 4;
 	-webkit-flex: 4;
 	    -ms-flex: 4;
@@ -61,13 +61,9 @@
 	padding: 10rpx 0rpx;
 	text-align: center;
 }
-#vcode{
-	-webkit-box-flex: 4;
-	-webkit-flex: 4;
-	    -ms-flex: 4;
-	        flex: 4;
-	background: #0077AA;
-	height: 40rpx;
+.vcode{
+	width: 100rpx;
+	height: 50rpx;
 }
 .btn{
 	margin: 40rpx;

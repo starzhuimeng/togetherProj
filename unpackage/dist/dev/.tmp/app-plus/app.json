@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/register/register",
     "pages/login/login",
     "pages/index/index",
     "pages/protype/protype",
     "pages/choice/choice",
     "pages/search/search",
-    "pages/register/register",
     "pages/condition/condition",
     "pages/newproj/newproj",
     "pages/message/message",

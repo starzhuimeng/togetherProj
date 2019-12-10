@@ -2,6 +2,12 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		
 		{
+		    "path" : "pages/register/register",
+		    "style" : {
+				"navigationBarTextStyle":"black",
+				"navigationBarTitleText":"注册"
+			}
+		},{
 		    "path" : "pages/login/login",
 		    "style" : {
 				"navigationBarTextStyle":"black",
@@ -34,12 +40,6 @@
 				"navigationStyle":"custom"
 			}
 		},{
-            "path" : "pages/register/register",
-            "style" : {
-				"navigationBarTextStyle":"black",
-				"navigationBarTitleText":"注册"
-			}
-        },{
             "path" : "pages/condition/condition",
             "style" : {}
         },{
