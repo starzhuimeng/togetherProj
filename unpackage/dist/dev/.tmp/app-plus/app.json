@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/protype/protype",
     "pages/choice/choice",
-    "pages/login/login",
     "pages/search/search",
     "pages/register/register",
     "pages/condition/condition",
@@ -37,7 +37,7 @@
         "text": "动态"
       },
       {
-        "pagePath": "pages/API/index",
+        "pagePath": "pages/protype/protype",
         "iconPath": "static/tab-icons/add.png",
         "selectedIconPath": "static/tab-icons-active/add.png",
         "text": "添加项目"

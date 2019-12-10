@@ -12,7 +12,7 @@
 			<view class="form-item">
 				<label class="label">验证码:</label>
 				<input class="input" type="text" v-model="vcode" value="" placeholder="请输入图上的验证码" />
-				<view @click="changeVcode" class="">
+				<view @click="changeVcode" class="vcode">
 					<image v-bind:src="vcodeUrl" style="width: 100%;height: 100%;"></image>
 				</view>
 			</view>
@@ -36,15 +36,16 @@
 				phone:"",//手机号inputValue
 				pass:"",//密码inputValue
 				vcode:"",//验证码inputValue
-				vcodeUrl:"http://localhost:8080/yiqiba/getVerify?id="+this.id
+				vcodeUrl:this.$global.serverPath+"/yiqiba/getVerify?id="+this.id
 			};
 		},
 		methods:{
 			login(){//用户点击登录调用login方法
 			//1.发送post请求，参数为以上input中的value
 				uni.request({
-					method:"POST",
-					url:"http://localhost:8080/yiqiba/login",
+					method:"GET",
+					url:this.$global.serverPath+"/yiqiba/login",
+					dataType:"json",
 					data:{
 						account:this.phone,
 						upass:this.pass,
@@ -107,8 +108,8 @@
 		font-size: 30upx;
 	}
 	.vcode{
-		width: 100upx;
-		height: 50upx;
+		width: 160upx;
+		height: 80upx;
 	}
 	.loginbtn{
 		width: 100%;

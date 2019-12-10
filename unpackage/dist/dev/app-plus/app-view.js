@@ -1116,6 +1116,7 @@ Z([3,'请输入图上的验证码'])
 Z(z[8])
 Z([[7],[3,'vcode']])
 Z(z[4])
+Z([3,'vcode'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'changeVcode']],[[4],[[5],[1,'$event']]]]]]]]]]])
 Z([[7],[3,'vcodeUrl']])
 Z([3,'width:100%;height:100%;'])
@@ -1318,46 +1319,19 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_9)return __WXML_GLOBAL__.ops_cached.$gwx_9
 __WXML_GLOBAL__.ops_cached.$gwx_9=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'content'])
-Z([3,'tab'])
-Z([3,'tab-item'])
-Z([3,'../../static/tab-icons/home.png'])
-Z([3,'width:100%;height:65rpx;'])
-Z([3,'首页'])
-Z(z[2])
-Z([3,'../../static/tab-icons/play-circle-fill.png'])
-Z(z[4])
-Z([3,'动态'])
-Z(z[2])
-Z([3,'addBtn'])
-Z([3,'+'])
-Z(z[2])
-Z([3,'../../static/tab-icons/xiaoxi.png'])
-Z(z[4])
-Z([3,'消息'])
-Z(z[2])
-Z([3,'../../static/tab-icons/mine.png'])
-Z(z[4])
-Z([3,'我的'])
+Z([3,'__l'])
+Z([3,'1'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_9);return __WXML_GLOBAL__.ops_cached.$gwx_9
 }
 function gz$gwx_10(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_10)return __WXML_GLOBAL__.ops_cached.$gwx_10
 __WXML_GLOBAL__.ops_cached.$gwx_10=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'content'])
-Z([3,'__l'])
-Z([3,'1'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_10);return __WXML_GLOBAL__.ops_cached.$gwx_10
 }
 function gz$gwx_11(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_11)return __WXML_GLOBAL__.ops_cached.$gwx_11
 __WXML_GLOBAL__.ops_cached.$gwx_11=[];
-(function(z){var a=11;function Z(ops){z.push(ops)}
-})(__WXML_GLOBAL__.ops_cached.$gwx_11);return __WXML_GLOBAL__.ops_cached.$gwx_11
-}
-function gz$gwx_12(){
-if( __WXML_GLOBAL__.ops_cached.$gwx_12)return __WXML_GLOBAL__.ops_cached.$gwx_12
-__WXML_GLOBAL__.ops_cached.$gwx_12=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'content'])
 Z([3,'status_bar'])
@@ -1385,11 +1359,11 @@ Z(z[3])
 Z([[2,'+'],[1,'3-'],[[7],[3,'index']]])
 Z([[4],[[5],[1,'default']]])
 Z([a,[[7],[3,'item']]])
-})(__WXML_GLOBAL__.ops_cached.$gwx_12);return __WXML_GLOBAL__.ops_cached.$gwx_12
+})(__WXML_GLOBAL__.ops_cached.$gwx_11);return __WXML_GLOBAL__.ops_cached.$gwx_11
 }
-function gz$gwx_13(){
-if( __WXML_GLOBAL__.ops_cached.$gwx_13)return __WXML_GLOBAL__.ops_cached.$gwx_13
-__WXML_GLOBAL__.ops_cached.$gwx_13=[];
+function gz$gwx_12(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_12)return __WXML_GLOBAL__.ops_cached.$gwx_12
+__WXML_GLOBAL__.ops_cached.$gwx_12=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'content'])
 Z([3,'__l'])
@@ -1403,14 +1377,20 @@ Z([3,'|'])
 Z(z[5])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'toLosePage']],[[4],[[5],[1,'$event']]]]]]]]]]])
 Z([3,'忘记密码'])
+})(__WXML_GLOBAL__.ops_cached.$gwx_12);return __WXML_GLOBAL__.ops_cached.$gwx_12
+}
+function gz$gwx_13(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_13)return __WXML_GLOBAL__.ops_cached.$gwx_13
+__WXML_GLOBAL__.ops_cached.$gwx_13=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'__l'])
+Z([3,'1'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_13);return __WXML_GLOBAL__.ops_cached.$gwx_13
 }
 function gz$gwx_14(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_14)return __WXML_GLOBAL__.ops_cached.$gwx_14
 __WXML_GLOBAL__.ops_cached.$gwx_14=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'__l'])
-Z([3,'1'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_14);return __WXML_GLOBAL__.ops_cached.$gwx_14
 }
 function gz$gwx_15(){
@@ -1429,6 +1409,8 @@ function gz$gwx_17(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_17)return __WXML_GLOBAL__.ops_cached.$gwx_17
 __WXML_GLOBAL__.ops_cached.$gwx_17=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'__l'])
+Z([3,'1'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_17);return __WXML_GLOBAL__.ops_cached.$gwx_17
 }
 function gz$gwx_18(){
@@ -1444,24 +1426,16 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_19)return __WXML_GLOBAL__.ops_cached.$gwx_19
 __WXML_GLOBAL__.ops_cached.$gwx_19=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__l'])
-Z([3,'1'])
-})(__WXML_GLOBAL__.ops_cached.$gwx_19);return __WXML_GLOBAL__.ops_cached.$gwx_19
-}
-function gz$gwx_20(){
-if( __WXML_GLOBAL__.ops_cached.$gwx_20)return __WXML_GLOBAL__.ops_cached.$gwx_20
-__WXML_GLOBAL__.ops_cached.$gwx_20=[];
-(function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'__l'])
 Z([3,'1upx solid #999'])
 Z([3,'30upx'])
 Z([3,'1'])
-})(__WXML_GLOBAL__.ops_cached.$gwx_20);return __WXML_GLOBAL__.ops_cached.$gwx_20
+})(__WXML_GLOBAL__.ops_cached.$gwx_19);return __WXML_GLOBAL__.ops_cached.$gwx_19
 }
 __WXML_GLOBAL__.ops_set.$gwx=z;
 __WXML_GLOBAL__.ops_init.$gwx=true;
 var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);console.error(e);}
 }}}()
-var x=['./components/choice.wxml','./components/indexcardview.wxml','./components/loginForm.wxml','./components/loseForm.wxml','./components/mehaotian-search/mehaotian-search.wxml','./components/projtype.wxml','./components/registerForm.wxml','./components/sun-tab/sun-tab.wxml','./components/tab.wxml','./pages/choice/choice.wxml','./pages/condition/condition.wxml','./pages/index/index.wxml','./pages/login/login.wxml','./pages/losepass/losepass.wxml','./pages/message/message.wxml','./pages/mine/mine.wxml','./pages/newproj/newproj.wxml','./pages/protype/protype.wxml','./pages/register/register.wxml','./pages/search/search.wxml'];d_[x[0]]={}
+var x=['./components/choice.wxml','./components/indexcardview.wxml','./components/loginForm.wxml','./components/loseForm.wxml','./components/mehaotian-search/mehaotian-search.wxml','./components/projtype.wxml','./components/registerForm.wxml','./components/sun-tab/sun-tab.wxml','./pages/choice/choice.wxml','./pages/condition/condition.wxml','./pages/index/index.wxml','./pages/login/login.wxml','./pages/losepass/losepass.wxml','./pages/message/message.wxml','./pages/mine/mine.wxml','./pages/newproj/newproj.wxml','./pages/protype/protype.wxml','./pages/register/register.wxml','./pages/search/search.wxml'];d_[x[0]]={}
 var m0=function(e,s,r,gg){
 var z=gz$gwx_1()
 var oB=_n('view')
@@ -1552,21 +1526,21 @@ _(x5,o6)
 _(o4,x5)
 var f7=_mz(z,'input',['bindinput',22,'class',1,'data-event-opts',2,'placeholder',3,'type',4,'value',5],[],e,s,gg)
 _(o4,f7)
-var c8=_mz(z,'view',['bindtap',28,'data-event-opts',1],[],e,s,gg)
-var h9=_mz(z,'image',['src',30,'style',1],[],e,s,gg)
+var c8=_mz(z,'view',['bindtap',28,'class',1,'data-event-opts',2],[],e,s,gg)
+var h9=_mz(z,'image',['src',31,'style',1],[],e,s,gg)
 _(c8,h9)
 _(o4,c8)
 _(hU,o4)
 var o0=_n('view')
-_rz(z,o0,'class',32,e,s,gg)
-var cAB=_mz(z,'button',['bindtap',33,'data-event-opts',1,'type',2],[],e,s,gg)
-var oBB=_oz(z,36,e,s,gg)
+_rz(z,o0,'class',33,e,s,gg)
+var cAB=_mz(z,'button',['bindtap',34,'data-event-opts',1,'type',2],[],e,s,gg)
+var oBB=_oz(z,37,e,s,gg)
 _(cAB,oBB)
 _(o0,cAB)
 _(hU,o0)
 _(cT,hU)
 var lCB=_n('view')
-_rz(z,lCB,'class',37,e,s,gg)
+_rz(z,lCB,'class',38,e,s,gg)
 _(cT,lCB)
 _(r,cT)
 return r
@@ -1845,55 +1819,8 @@ d_[x[8]]={}
 var m8=function(e,s,r,gg){
 var z=gz$gwx_9()
 var cBE=_n('view')
-var hCE=_n('view')
-_rz(z,hCE,'class',0,e,s,gg)
-var oDE=_n('view')
-_rz(z,oDE,'class',1,e,s,gg)
-var cEE=_n('view')
-_rz(z,cEE,'class',2,e,s,gg)
-var oFE=_mz(z,'cover-image',['src',3,'style',1],[],e,s,gg)
-_(cEE,oFE)
-var lGE=_n('text')
-var aHE=_oz(z,5,e,s,gg)
-_(lGE,aHE)
-_(cEE,lGE)
-_(oDE,cEE)
-var tIE=_n('view')
-_rz(z,tIE,'class',6,e,s,gg)
-var eJE=_mz(z,'cover-image',['src',7,'style',1],[],e,s,gg)
-_(tIE,eJE)
-var bKE=_n('text')
-var oLE=_oz(z,9,e,s,gg)
-_(bKE,oLE)
-_(tIE,bKE)
-_(oDE,tIE)
-var xME=_n('view')
-_rz(z,xME,'class',10,e,s,gg)
-var oNE=_n('view')
-_rz(z,oNE,'class',11,e,s,gg)
-var fOE=_oz(z,12,e,s,gg)
-_(oNE,fOE)
-_(xME,oNE)
-_(oDE,xME)
-var cPE=_n('view')
-_rz(z,cPE,'class',13,e,s,gg)
-var hQE=_mz(z,'cover-image',['src',14,'style',1],[],e,s,gg)
-_(cPE,hQE)
-var oRE=_n('text')
-var cSE=_oz(z,16,e,s,gg)
-_(oRE,cSE)
-_(cPE,oRE)
-_(oDE,cPE)
-var oTE=_n('view')
-_rz(z,oTE,'class',17,e,s,gg)
-var lUE=_mz(z,'cover-image',['src',18,'style',1],[],e,s,gg)
-_(oTE,lUE)
-var aVE=_n('text')
-var tWE=_oz(z,20,e,s,gg)
-_(aVE,tWE)
-_(oTE,aVE)
-_(oDE,oTE)
-_(hCE,oDE)
+_rz(z,cBE,'class',0,e,s,gg)
+var hCE=_mz(z,'card',['bind:__l',1,'vueId',1],[],e,s,gg)
 _(cBE,hCE)
 _(r,cBE)
 return r
@@ -1902,145 +1829,134 @@ e_[x[8]]={f:m8,j:[],i:[],ti:[],ic:[]}
 d_[x[9]]={}
 var m9=function(e,s,r,gg){
 var z=gz$gwx_10()
-var bYE=_n('view')
-_rz(z,bYE,'class',0,e,s,gg)
-var oZE=_mz(z,'card',['bind:__l',1,'vueId',1],[],e,s,gg)
-_(bYE,oZE)
-_(r,bYE)
+var cEE=_n('view')
+_(r,cEE)
 return r
 }
 e_[x[9]]={f:m9,j:[],i:[],ti:[],ic:[]}
 d_[x[10]]={}
 var m10=function(e,s,r,gg){
 var z=gz$gwx_11()
-var o2E=_n('view')
-_(r,o2E)
+var lGE=_n('view')
+_rz(z,lGE,'class',0,e,s,gg)
+var aHE=_n('view')
+_rz(z,aHE,'class',1,e,s,gg)
+_(lGE,aHE)
+var tIE=_n('view')
+_rz(z,tIE,'class',2,e,s,gg)
+var eJE=_mz(z,'search',['bind:__l',3,'bind:tap',1,'border',2,'data-event-opts',3,'radius',4,'vueId',5],[],e,s,gg)
+_(tIE,eJE)
+var bKE=_mz(z,'suntab',['bind:__l',9,'bind:updateValue',1,'data-event-opts',2,'rangeKey',3,'tabList',4,'value',5,'vueId',6],[],e,s,gg)
+_(tIE,bKE)
+_(lGE,tIE)
+var oLE=_mz(z,'scroll-view',['class',16,'scrollY',1,'showScrollbar',2],[],e,s,gg)
+var xME=_n('view')
+var oNE=_v()
+_(xME,oNE)
+var fOE=function(hQE,cPE,oRE,gg){
+var oTE=_mz(z,'indexcardview',['bind:__l',22,'vueId',1,'vueSlots',2],[],hQE,cPE,gg)
+var lUE=_oz(z,25,hQE,cPE,gg)
+_(oTE,lUE)
+_(oRE,oTE)
+return oRE
+}
+oNE.wxXCkey=4
+_2z(z,21,fOE,e,s,gg,oNE,'item','index','')
+_(oLE,xME)
+_(lGE,oLE)
+_(r,lGE)
 return r
 }
 e_[x[10]]={f:m10,j:[],i:[],ti:[],ic:[]}
 d_[x[11]]={}
 var m11=function(e,s,r,gg){
 var z=gz$gwx_12()
-var c4E=_n('view')
-_rz(z,c4E,'class',0,e,s,gg)
-var h5E=_n('view')
-_rz(z,h5E,'class',1,e,s,gg)
+var tWE=_n('view')
+_rz(z,tWE,'class',0,e,s,gg)
+var eXE=_mz(z,'loginform',['bind:__l',1,'vueId',1],[],e,s,gg)
+_(tWE,eXE)
+var bYE=_mz(z,'view',['class',3,'id',1],[],e,s,gg)
+var oZE=_mz(z,'view',['bindtap',5,'data-event-opts',1],[],e,s,gg)
+var x1E=_oz(z,7,e,s,gg)
+_(oZE,x1E)
+_(bYE,oZE)
+var o2E=_n('view')
+var f3E=_oz(z,8,e,s,gg)
+_(o2E,f3E)
+_(bYE,o2E)
+var c4E=_mz(z,'view',['bindtap',9,'data-event-opts',1],[],e,s,gg)
+var h5E=_oz(z,11,e,s,gg)
 _(c4E,h5E)
-var o6E=_n('view')
-_rz(z,o6E,'class',2,e,s,gg)
-var c7E=_mz(z,'search',['bind:__l',3,'bind:tap',1,'border',2,'data-event-opts',3,'radius',4,'vueId',5],[],e,s,gg)
-_(o6E,c7E)
-var o8E=_mz(z,'suntab',['bind:__l',9,'bind:updateValue',1,'data-event-opts',2,'rangeKey',3,'tabList',4,'value',5,'vueId',6],[],e,s,gg)
-_(o6E,o8E)
-_(c4E,o6E)
-var l9E=_mz(z,'scroll-view',['class',16,'scrollY',1,'showScrollbar',2],[],e,s,gg)
-var a0E=_n('view')
-var tAF=_v()
-_(a0E,tAF)
-var eBF=function(oDF,bCF,xEF,gg){
-var fGF=_mz(z,'indexcardview',['bind:__l',22,'vueId',1,'vueSlots',2],[],oDF,bCF,gg)
-var cHF=_oz(z,25,oDF,bCF,gg)
-_(fGF,cHF)
-_(xEF,fGF)
-return xEF
-}
-tAF.wxXCkey=4
-_2z(z,21,eBF,e,s,gg,tAF,'item','index','')
-_(l9E,a0E)
-_(c4E,l9E)
-_(r,c4E)
+_(bYE,c4E)
+_(tWE,bYE)
+_(r,tWE)
 return r
 }
 e_[x[11]]={f:m11,j:[],i:[],ti:[],ic:[]}
 d_[x[12]]={}
 var m12=function(e,s,r,gg){
 var z=gz$gwx_13()
-var oJF=_n('view')
-_rz(z,oJF,'class',0,e,s,gg)
-var cKF=_mz(z,'loginform',['bind:__l',1,'vueId',1],[],e,s,gg)
-_(oJF,cKF)
-var oLF=_mz(z,'view',['class',3,'id',1],[],e,s,gg)
-var lMF=_mz(z,'view',['bindtap',5,'data-event-opts',1],[],e,s,gg)
-var aNF=_oz(z,7,e,s,gg)
-_(lMF,aNF)
-_(oLF,lMF)
-var tOF=_n('view')
-var ePF=_oz(z,8,e,s,gg)
-_(tOF,ePF)
-_(oLF,tOF)
-var bQF=_mz(z,'view',['bindtap',9,'data-event-opts',1],[],e,s,gg)
-var oRF=_oz(z,11,e,s,gg)
-_(bQF,oRF)
-_(oLF,bQF)
-_(oJF,oLF)
-_(r,oJF)
+var c7E=_n('view')
+var o8E=_mz(z,'lose',['bind:__l',0,'vueId',1],[],e,s,gg)
+_(c7E,o8E)
+_(r,c7E)
 return r
 }
 e_[x[12]]={f:m12,j:[],i:[],ti:[],ic:[]}
 d_[x[13]]={}
 var m13=function(e,s,r,gg){
 var z=gz$gwx_14()
-var oTF=_n('view')
-var fUF=_mz(z,'lose',['bind:__l',0,'vueId',1],[],e,s,gg)
-_(oTF,fUF)
-_(r,oTF)
+var a0E=_n('view')
+_(r,a0E)
 return r
 }
 e_[x[13]]={f:m13,j:[],i:[],ti:[],ic:[]}
 d_[x[14]]={}
 var m14=function(e,s,r,gg){
 var z=gz$gwx_15()
-var hWF=_n('view')
-_(r,hWF)
+var eBF=_n('view')
+_(r,eBF)
 return r
 }
 e_[x[14]]={f:m14,j:[],i:[],ti:[],ic:[]}
 d_[x[15]]={}
 var m15=function(e,s,r,gg){
 var z=gz$gwx_16()
-var cYF=_n('view')
-_(r,cYF)
+var oDF=_n('view')
+_(r,oDF)
 return r
 }
 e_[x[15]]={f:m15,j:[],i:[],ti:[],ic:[]}
 d_[x[16]]={}
 var m16=function(e,s,r,gg){
 var z=gz$gwx_17()
-var l1F=_n('view')
-_(r,l1F)
+var oFF=_n('view')
+var fGF=_mz(z,'plate',['bind:__l',0,'vueId',1],[],e,s,gg)
+_(oFF,fGF)
+_(r,oFF)
 return r
 }
 e_[x[16]]={f:m16,j:[],i:[],ti:[],ic:[]}
 d_[x[17]]={}
 var m17=function(e,s,r,gg){
 var z=gz$gwx_18()
-var t3F=_n('view')
-var e4F=_mz(z,'plate',['bind:__l',0,'vueId',1],[],e,s,gg)
-_(t3F,e4F)
-_(r,t3F)
+var hIF=_n('view')
+var oJF=_mz(z,'regi',['bind:__l',0,'vueId',1],[],e,s,gg)
+_(hIF,oJF)
+_(r,hIF)
 return r
 }
 e_[x[17]]={f:m17,j:[],i:[],ti:[],ic:[]}
 d_[x[18]]={}
 var m18=function(e,s,r,gg){
 var z=gz$gwx_19()
-var o6F=_n('view')
-var x7F=_mz(z,'regi',['bind:__l',0,'vueId',1],[],e,s,gg)
-_(o6F,x7F)
-_(r,o6F)
+var oLF=_n('view')
+var lMF=_mz(z,'search',['bind:__l',0,'border',1,'radius',1,'vueId',2],[],e,s,gg)
+_(oLF,lMF)
+_(r,oLF)
 return r
 }
 e_[x[18]]={f:m18,j:[],i:[],ti:[],ic:[]}
-d_[x[19]]={}
-var m19=function(e,s,r,gg){
-var z=gz$gwx_20()
-var f9F=_n('view')
-var c0F=_mz(z,'search',['bind:__l',0,'border',1,'radius',1,'vueId',2],[],e,s,gg)
-_(f9F,c0F)
-_(r,f9F)
-return r
-}
-e_[x[19]]={f:m19,j:[],i:[],ti:[],ic:[]}
 if(path&&e_[path]){
 window.__wxml_comp_version__=0.02
 return function(env,dd,global){$gwxc=0;var root={"tag":"wx-page"};root.children=[]
@@ -2171,7 +2087,7 @@ __wxAppCode__['components/choice.wxml']=$gwx('./components/choice.wxml');
 __wxAppCode__['components/indexcardview.wxss']=setCssToHead([".",[1],"content{ width: ",[0,690],"; height: ",[0,360],"; margin: 0 auto; background-color: #0077AA; margin-bottom: ",[0,30],"; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; border-radius: ",[0,10],"; overflow: hidden; }\n.",[1],"bg{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-flex: 7; -webkit-flex: 7; -ms-flex: 7; flex: 7; background: #4CD964; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-content: flex-end ; -ms-flex-line-pack: end; align-content: flex-end ; position: relative; }\n.",[1],"user{ position: absolute; bottom: ",[0,0],"; background: #0077AA; height: 20%; width: 100%; }\n.",[1],"line{ height: ",[0,10],"; background: #333333; }\n.",[1],"info{ -webkit-box-flex: 2; -webkit-flex: 2; -ms-flex: 2; flex: 2; background: #f40; }\n",],undefined,{path:"./components/indexcardview.wxss"});    
 __wxAppCode__['components/indexcardview.wxml']=$gwx('./components/indexcardview.wxml');
 
-__wxAppCode__['components/loginForm.wxss']=setCssToHead([".",[1],"content{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; padding: ",[0,50],"; }\n.",[1],"form-item{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: ",[0,30]," ",[0,10],"; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }\n.",[1],"label{ text-align: center; width: ",[0,150],"; font-size: ",[0,30],"; color: #666; }\n.",[1],"input{ color: #666; border-bottom: 1px solid #ccc; -webkit-box-flex: 8; -webkit-flex: 8; -ms-flex: 8; flex: 8; padding: ",[0,5]," ",[0,20],"; font-size: ",[0,30],"; }\n.",[1],"vcode{ width: ",[0,100],"; height: ",[0,50],"; }\n.",[1],"loginbtn{ width: 100%; }\n.",[1],"btn{ margin: ",[0,40],"; }\n",],undefined,{path:"./components/loginForm.wxss"});    
+__wxAppCode__['components/loginForm.wxss']=setCssToHead([".",[1],"content{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; padding: ",[0,50],"; }\n.",[1],"form-item{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: ",[0,30]," ",[0,10],"; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }\n.",[1],"label{ text-align: center; width: ",[0,150],"; font-size: ",[0,30],"; color: #666; }\n.",[1],"input{ color: #666; border-bottom: 1px solid #ccc; -webkit-box-flex: 8; -webkit-flex: 8; -ms-flex: 8; flex: 8; padding: ",[0,5]," ",[0,20],"; font-size: ",[0,30],"; }\n.",[1],"vcode{ width: ",[0,160],"; height: ",[0,80],"; }\n.",[1],"loginbtn{ width: 100%; }\n.",[1],"btn{ margin: ",[0,40],"; }\n",],undefined,{path:"./components/loginForm.wxss"});    
 __wxAppCode__['components/loginForm.wxml']=$gwx('./components/loginForm.wxml');
 
 __wxAppCode__['components/loseForm.wxss']=setCssToHead([".",[1],"content{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 15px; }\n.",[1],"content .",[1],"form-item{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding: ",[0,30]," ",[0,10],"; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }\n.",[1],"content .",[1],"form-item wx-label{ text-align: center; width: ",[0,150],"; font-size: ",[0,30],"; color: #666; }\n.",[1],"content .",[1],"form-item wx-input{ color: #666; border-bottom: 1px solid #ccc; -webkit-box-flex: 8; -webkit-flex: 8; -ms-flex: 8; flex: 8; padding: ",[0,5]," ",[0,20],"; font-size: ",[0,30],"; }\n#vcodebtn{ -webkit-box-flex: 4; -webkit-flex: 4; -ms-flex: 4; flex: 4; border: ",[0,1]," solid #666; font-size: ",[0,24],"; color: #666; padding: ",[0,10]," ",[0,0],"; text-align: center; }\n.",[1],"btn{ margin: ",[0,40],"; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./components/loseForm.wxss:53:1)",{path:"./components/loseForm.wxss"});    
@@ -2188,9 +2104,6 @@ __wxAppCode__['components/registerForm.wxml']=$gwx('./components/registerForm.wx
 
 __wxAppCode__['components/sun-tab/sun-tab.wxss']=setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"uni-tab.",[1],"data-v-44b02ed6 { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; font-size: 14px; height: 44px; line-height: 44px; background-color: #fff; }\n.",[1],"uni-tab .",[1],"uni-tab-item.",[1],"data-v-44b02ed6 { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; height: 100%; text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; }\n.",[1],"uni-tab .",[1],"uni-tab-scroll-item.",[1],"data-v-44b02ed6 { -webkit-box-flex: 0; -webkit-flex: none; -ms-flex: none; flex: none; padding: 0px 12px; }\n.",[1],"uni-tab .",[1],"uni-tab-active.",[1],"data-v-44b02ed6 { color: #1e9fff; }\n.",[1],"uni-tab .",[1],"uni-tab-scroll-active.",[1],"data-v-44b02ed6 { border-bottom: 3px solid #1e9fff; }\n.",[1],"uni-tab .",[1],"uni-tab-bar.",[1],"data-v-44b02ed6 { display: block; height: 3px; position: absolute; bottom: 0; border-bottom: 3px solid #1e9fff; }\n.",[1],"uni-tab .",[1],"uni-tab-bar-forward.",[1],"data-v-44b02ed6 { -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s; -o-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s; transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s; }\n.",[1],"uni-tab .",[1],"uni-tab-bar-backward.",[1],"data-v-44b02ed6 { -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1); -o-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1); transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1); }\n.",[1],"uni-scroll-tab.",[1],"data-v-44b02ed6 { overflow-x: scroll; }\n",],undefined,{path:"./components/sun-tab/sun-tab.wxss"});    
 __wxAppCode__['components/sun-tab/sun-tab.wxml']=$gwx('./components/sun-tab/sun-tab.wxml');
-
-__wxAppCode__['components/tab.wxss']=setCssToHead([".",[1],"content{ width: ",[0,750],"; }\n.",[1],"tab{ width: 100%; height: ",[0,120],"; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-content: space-around; -ms-flex-line-pack: distribute; align-content: space-around; -webkit-box-shadow:",[0,0]," ",[0,-3]," ",[0,5]," ",[0,3]," #ddd; box-shadow:",[0,0]," ",[0,-3]," ",[0,5]," ",[0,3]," #ddd; }\n.",[1],"tab-item{ -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; vertical-align: middle; padding: ",[0,10]," ",[0,40],"; font-size: ",[0,18],"; color: #8a8a8a; }\n.",[1],"addBtn{ font-size: ",[0,72],"; color: white; background-color: #049ff1; position: absolute; width: ",[0,100],"; height: ",[0,100],"; text-align: center; line-height: ",[0,90],"; bottom: ",[0,150],"; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); border-radius: 50%; }\n",],undefined,{path:"./components/tab.wxss"});    
-__wxAppCode__['components/tab.wxml']=$gwx('./components/tab.wxml');
 
 __wxAppCode__['pages/choice/choice.wxss']=undefined;    
 __wxAppCode__['pages/choice/choice.wxml']=$gwx('./pages/choice/choice.wxml');

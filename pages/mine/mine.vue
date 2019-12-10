@@ -5,6 +5,7 @@
 </template>
 
 <script>
+	import global from "../../global.js"
 	export default {
 		data() {
 			return {

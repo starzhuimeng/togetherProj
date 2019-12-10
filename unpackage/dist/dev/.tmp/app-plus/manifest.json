@@ -118,7 +118,7 @@
           "text": "动态"
         },
         {
-          "pagePath": "pages/API/index",
+          "pagePath": "pages/protype/protype",
           "iconPath": "static/tab-icons/add.png",
           "selectedIconPath": "static/tab-icons-active/add.png",
           "text": "添加项目"
@@ -136,11 +136,7 @@
           "text": "个人中心"
         }
       ],
-      "height": "50px",
-      "child": [
-        "lauchwebview"
-      ],
-      "selected": 0
+      "height": "50px"
     }
   }
 }

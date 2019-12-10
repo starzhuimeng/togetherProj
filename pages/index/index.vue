@@ -53,6 +53,8 @@
 			}
 		},
 		onLoad() {
+			// console.log(Vue.config.path)
+			console.log(this.$global.serverPath)
 		},
 		methods: {
 			arrayChange(e){
