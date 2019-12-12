@@ -1,11 +1,16 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		
 		{
 		    "path" : "pages/register/register",
 		    "style" : {
 				"navigationBarTextStyle":"black",
 				"navigationBarTitleText":"注册"
+			}
+		},{
+		    "path" : "pages/losepass/losepass",
+		    "style" : {
+				"navigationBarTextStyle":"black",
+				"navigationBarTitleText":"忘记密码"
 			}
 		},{
 		    "path" : "pages/login/login",
@@ -51,12 +56,6 @@
         },{
             "path" : "pages/mine/mine",
             "style" : {}
-        },{
-            "path" : "pages/losepass/losepass",
-            "style" : {
-				"navigationBarTextStyle":"black",
-				"navigationBarTitleText":"忘记密码"
-			}
         }
         
     ],

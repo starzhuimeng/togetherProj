@@ -9,7 +9,7 @@
 			<view class="form-item">
 				<label>手机号:</label>
 				<input id="pass" type="number" v-model="phone" maxlength="11" value="" placeholder="请输入您的手机号" />
-				<view @click.once="putPhoneCode" id="" class="vcodebtn">
+				<view @click="putPhoneCode" id="" class="vcodebtn">
 					{{phoneCodeVal}}
 				</view>
 			</view>
@@ -51,25 +51,7 @@
 			};
 		},
 		methods:{
-			login(){//用户点击登录调用login方法
-			//1.发送post请求，参数为以上input中的value
-				uni.request({
-					method:"POST",
-					url:"",
-					data:{
-						phone:this.phone,
-						pass:this.pass,
-						vcode:this.vcode,
-						
-					},
-					success(val) {
-						console.log(val)
-					},
-					fail(e) {
-						console.log(e)
-					}
-				})
-			},
+			
 			putPhoneCode(){
 				uni.request({
 					method:"GET",
@@ -97,6 +79,7 @@
 						console.log(req)
 						uni.showToast({
 							title: '发送失败，请重新发送',
+							icon:'none',
 							success: (e) => {
 								this.phoneCodeVal = "重新发送"
 							}
@@ -109,9 +92,9 @@
 					method:"GET",
 					url:this.$global.serverPath + "/yiqiba/reg",
 					data:{
-						usersData:{
-							
-						}
+						nickname:this.uname,
+						account:this.phone,
+						upass:this.pass
 					},
 					success: (req) => {
 						console.log(req)

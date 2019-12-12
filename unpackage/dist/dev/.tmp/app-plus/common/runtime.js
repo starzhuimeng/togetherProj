@@ -102,11 +102,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/registerForm":1,"components/loginForm":1,"components/mehaotian-search/mehaotian-search":1,"components/indexcardview":1,"components/sun-tab/sun-tab":1,"components/projtype":1,"components/choice":1,"components/loseForm":1};
+/******/ 		var cssChunks = {"components/registerForm":1,"components/loseForm":1,"components/loginForm":1,"components/mehaotian-search/mehaotian-search":1,"components/indexcardview":1,"components/sun-tab/sun-tab":1,"components/projtype":1,"components/choice":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/registerForm":"components/registerForm","components/loginForm":"components/loginForm","components/mehaotian-search/mehaotian-search":"components/mehaotian-search/mehaotian-search","components/indexcardview":"components/indexcardview","components/sun-tab/sun-tab":"components/sun-tab/sun-tab","components/projtype":"components/projtype","components/choice":"components/choice","components/loseForm":"components/loseForm"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/registerForm":"components/registerForm","components/loseForm":"components/loseForm","components/loginForm":"components/loginForm","components/mehaotian-search/mehaotian-search":"components/mehaotian-search/mehaotian-search","components/indexcardview":"components/indexcardview","components/sun-tab/sun-tab":"components/sun-tab/sun-tab","components/projtype":"components/projtype","components/choice":"components/choice"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/register/register",
+    "pages/losepass/losepass",
     "pages/login/login",
     "pages/index/index",
     "pages/protype/protype",
@@ -9,8 +10,7 @@
     "pages/condition/condition",
     "pages/newproj/newproj",
     "pages/message/message",
-    "pages/mine/mine",
-    "pages/losepass/losepass"
+    "pages/mine/mine"
   ],
   "window": {
     "navigationBarTextStyle": "black",
