@@ -3,7 +3,7 @@
 		<view class="content">
 			<view class="form-item">
 				<label>昵&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
-				<input id="phone" type="text" v-model="uname" maxlength="16" value="" placeholder="请输入您的称呼" />
+				<input type="text" v-model="uname" maxlength="16" value="" placeholder="请输入您的称呼" />
 				
 			</view>
 			<view class="form-item">
@@ -15,7 +15,7 @@
 			</view>
 			<view class="form-item">
 				<label>验证码:</label>
-				<input class="phone" type="number" maxlength="6" v-model="pnonecode" value="" placeholder="请输入获取的验证码" />
+				<input class="phone" type="number" maxlength="6" v-model="phonecode" value="" placeholder="请输入获取的验证码" />
 				
 			</view>
 			<view class="form-item">
@@ -47,7 +47,10 @@
 				vcode:"",//验证码inputValue
 				phonecode:"",//手机验证码
 				vcodeUrl:this.$global.serverPath+"/yiqiba/getVerify?id="+this.id,
-				phoneCodeVal:"获取验证码"
+				phoneCodeVal:"获取验证码",
+				isVcode:false,
+				isUserRepeat:false,
+				isPhoneCode:false
 			};
 		},
 		methods:{
@@ -59,8 +62,8 @@
 					data:{
 						account:this.uname
 					},
-					success: (req) => {
-						console.log(req.data)
+					success: (res) => {
+						this.phonecode = res.data
 						var second = 60
 						var timer = setInterval(()=>{
 							if(second > 0){
@@ -88,21 +91,107 @@
 				})
 			},
 			complate(){
+				/**
+				 * 1.用户点击注册，验证文本框内容是否为空，为空则给出提示
+				 * 2.验证图片是否正确
+				 * 3.验证手机验证码是否正确
+				 * 4.查询用户名是否已被注册
+				 * */
+				 var isNull;
+				 if(this.uname == ""){
+					 isNull = 1
+				 }else if(this.phone == ""){
+					 isNull = 2
+				 }else if(this.phonecode == ""){
+					 isNull = 3
+				 }else if(this.pass == ""){
+					 isNull = 4
+				 }else if(this.vcode == ""){
+					 isNull = 5
+				 }
+				 switch(isNull){
+				 	case 1:
+						uni.showToast({
+							icon:'none',
+							title: '昵称不能为空'
+						});
+				 		break;
+					case 2:
+						uni.showToast({
+							icon:'none',
+							title: '手机号不能为空'
+						});
+						break;
+					case 3:
+						uni.showToast({
+							icon:'none',
+							title: '手机验证码不能为空'
+						});
+						break;
+					case 4:
+						uni.showToast({
+							icon:'none',
+							title: '密码不能为空'
+						});
+						break;
+					case 5:
+						uni.showToast({
+							icon:'none',
+							title: '图片验证码不能为空'
+						});
+						break;
+				 }
+				 
+				 
+				 //发送图片验证，验证图片是否正确
 				uni.request({
 					method:"GET",
-					url:this.$global.serverPath + "/yiqiba/reg",
+					url:this.$global.serverPath + "/yiqiba/checkVerify",
 					data:{
-						nickname:this.uname,
-						account:this.phone,
-						upass:this.pass
+						inputStr:this.vcode
 					},
-					success: (req) => {
-						console.log(req)
+					success: (res) => {
+						this.isVcode = res.data
 					},
-					fail: (req) => {
-						console.log(req)
+					fail: (res) => {
+						uni.showToast({
+							title: '图片验证码验证失败，请检查网络连接',
+							icon:'none'
+						});
 					}
 				})
+				
+				//验证手机验证码是否正确
+				
+				
+				//验证用户是否被注册
+				uni.request({
+					method:"GET",
+					url:this.$global.serverPath + "/yiqiba/VerifyPhoneNumber",
+					data:{
+						account:this.phone
+					},
+					success: (res) => {
+						this.isUserRepeat = res.data
+					}
+				})
+				if(this.isUserRepeat){
+					uni.request({
+						method:"GET",
+						url:this.$global.serverPath + "/yiqiba/reg",
+						data:{
+							nickname:this.uname,
+							account:this.phone,
+							upass:this.pass
+						},
+						success: (req) => {
+							console.log(req)
+						},
+						fail: (req) => {
+							console.log(req)
+						}
+					})
+				}
 			},
 			changeVcode(){
 				var id = this.id+1;
