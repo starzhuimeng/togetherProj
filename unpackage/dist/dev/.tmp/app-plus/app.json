@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/register/register",
     "pages/losepass/losepass",
+    "pages/register/register",
     "pages/login/login",
     "pages/index/index",
     "pages/protype/protype",

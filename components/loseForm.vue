@@ -35,24 +35,7 @@
 			};
 		},
 		methods:{
-			login(){//用户点击登录调用login方法
-			//1.发送post请求，参数为以上input中的value
-				uni.request({
-					method:"POST",
-					url:"",
-					data:{
-						phone:this.phone,
-						pass:this.pass,
-						phonecode:this.phonecode
-					},
-					success(val) {
-						console.log(val)
-					},
-					fail(e) {
-						console.log(e)
-					}
-				})
-			},
+			
 			putPhoneCode(){
 				uni.request({
 					method:"GET",
@@ -60,14 +43,13 @@
 					data:{
 						account:this.uname
 					},
-					success: (req) => {
-						console.log(req.data)
+					success: (res) => {
+						this.phonecode = res.data
 						var second = 60
 						var timer = setInterval(()=>{
 							if(second > 0){
 								second -= 1
 								this.phoneCodeVal = second + "s"
-								console.log(second)
 							}else{
 								this.phoneCodeVal = "重新发送"
 								clearInterval(timer)
@@ -89,7 +71,72 @@
 				})
 			},
 			complate(){
-				console.log('complate')
+				/**
+				 * 1.用户点击注册，验证文本框内容是否为空，为空则给出提示
+				 * 2.验证图片是否正确
+				 * 3.验证手机验证码是否正确
+				 * 4.查询用户名是否已被注册
+				 * */
+				 var isNull;
+				 if(this.phone == ""){
+					 isNull = 1
+				 }else if(this.pass == ""){
+					 isNull = 2
+				 }else if(this.phonecode == ""){
+					 isNull = 3
+				 }
+				 switch(isNull){
+				 	case 1:
+						uni.showToast({
+							icon:'none',
+							title: '手机号不能为空'
+						});
+				 		break;
+					case 2:
+						uni.showToast({
+							icon:'none',
+							title: '密码不能为空'
+						});
+						break;
+					case 3:
+						uni.showToast({
+							icon:'none',
+							title: '验证码不能为空'
+						});
+						break;
+					
+				 }
+				 
+				 
+				 //更新用户密码
+				 uni.request({
+				 	method:"GET",
+					url:this.$global.serverPath + "/yiqiba/Updataupass",
+					data:{
+						account: this.phone.toString(),
+						upass: this.pass.toString()
+					},
+					success: (res) => {
+						if(res.data){
+							uni.showToast({
+								title: '密码修改成功',
+								icon:"none"
+							});
+							uni.navigateTo({
+								url: '../pages/login/login',
+								success: res => {
+									console.log(login)
+								},
+								fail: () => {},
+								complete: () => {}
+							});
+						}
+					},
+					fail: (res) => {
+						console.log("发送失败"+res.data)
+					}
+				 })
+				
 			}
 		}
 	}
