@@ -1,2 +1,2 @@
-setCssToHead([".",[1],"status_bar { height: var(--status-bar-height); width: 100%; }\n.",[1],"swiperItem{ max-height: ",[0,1236],"; }\n.",[1],"fixed{ position: relative; top: 0; }\n",],undefined,{path:"./pages/index/index.wxss"})();
+setCssToHead([".",[1],"content{ }\n.",[1],"status_bar { height: var(--status-bar-height); width: 100%; top: 0; position: fixed; background-color: white; z-index: 999; }\n.",[1],"swiperItem{ max-height: 80%; margin-top: ",[0,300],"; }\n.",[1],"fixed{ position: fixed; z-index: 99999; width: ",[0,750],"; top: var(--status-bar-height); }\n",],undefined,{path:"./pages/index/index.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/index.wxml') } }));

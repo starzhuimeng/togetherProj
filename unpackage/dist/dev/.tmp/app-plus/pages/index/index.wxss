@@ -1,15 +1,24 @@
 
+.content{
+}
 .status_bar {
     height: var(--status-bar-height);
     width: 100%;
+	top: 0;
+	position: fixed;
+	background-color: white;
+	z-index: 999;
 }
 .swiperItem{
 		/* overflow: scroll; */
-		max-height: 1236rpx;
+		max-height: 80%;
+		margin-top: 300rpx;
 }
 .fixed{
-	position: relative;
-	top: 0;
+	position: fixed;
+	z-index: 99999;
+	width: 750rpx;
+	top: var(--status-bar-height);
 }
 
 

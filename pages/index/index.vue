@@ -10,7 +10,7 @@
 			</swiper> -->
 			<suntab :value.sync="current"  :tabList="tabObjectList" rangeKey="name"></suntab>
 		</view>
-		<scroll-view style="height: 1200upx;" show-scrollbar=false class="swiperItem" scroll-y="true">
+		<scroll-view show-scrollbar=false class="swiperItem" style="margin-bottom: 50upx;" scroll-y="true">
 			<view>
 				<indexcardview v-for="(item,index) in list">{{item}}</indexcardview>
 			</view>
@@ -48,7 +48,7 @@
 					    value: 1
 					}
 				],
-				list:[1,2,3,4]
+				list:[1,2,3,4,5,6,7,8]
 								
 			}
 		},
@@ -91,19 +91,25 @@
 
 <style>
 	.content{
-		height: 1330upx!important;
 	}
 	.status_bar {
 	    height: var(--status-bar-height);
 	    width: 100%;
+		top: 0;
+		position: fixed;
+		background-color: white;
+		z-index: 999;
 	}
 	.swiperItem{
 			/* overflow: scroll; */
-			max-height: 1330upx;
+			max-height: 80%;
+			margin-top: 300upx;
 	}
 	.fixed{
-		position: relative;
-		top: 0;
+		position: fixed;
+		z-index: 99999;
+		width: 750upx;
+		top: var(--status-bar-height);
 	}
 	
 </style>
