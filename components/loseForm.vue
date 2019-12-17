@@ -107,14 +107,14 @@
 					
 				 }
 				 
-				 
+				 console.log(this.$global.serverPath)
 				 //更新用户密码
 				 uni.request({
 				 	method:"GET",
 					url:this.$global.serverPath + "/yiqiba/Updataupass",
 					data:{
-						account: this.phone.toString(),
-						upass: this.pass.toString()
+						account: this.phone,
+						upass: this.pass
 					},
 					success: (res) => {
 						if(res.data){
@@ -130,6 +130,8 @@
 								fail: () => {},
 								complete: () => {}
 							});
+						}else{
+							console.log(res)
 						}
 					},
 					fail: (res) => {

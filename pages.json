@@ -1,6 +1,22 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path" : "pages/mine/mine",
+		    "style" : {
+				"navigationStyle":"custom"
+			}
+		},{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle":"custom",
+				
+				"app-plus": {
+				    "bounce": "none",
+				    "titleNView": false
+				},
+				"statusbar":"red"
+			}
+		},{
 		    "path" : "pages/losepass/losepass",
 		    "style" : {
 				"navigationBarTextStyle":"black",
@@ -17,17 +33,6 @@
 		    "style" : {
 				"navigationBarTextStyle":"black",
 				"navigationBarTitleText":"登录"
-			}
-		},{
-			"path": "pages/index/index",
-			"style": {
-				"navigationStyle":"custom",
-				
-				"app-plus": {
-				    "bounce": "none",
-				    "titleNView": false
-				},
-				"statusbar":"red"
 			}
 		},{
 			"path": "pages/protype/protype",
@@ -52,9 +57,6 @@
             "style" : {}
         },{
             "path" : "pages/message/message",
-            "style" : {}
-        },{
-            "path" : "pages/mine/mine",
             "style" : {}
         }
         
