@@ -2,11 +2,11 @@
 	<view style="background-color: #ddd;overflow: hidden;">
 		<view >
 			<view class="title">
-				<text class="login">
-					<navigator style="color: white;font-size: 48upx;font-weight: 500;" url="../login/login">登录 · 注册</navigator>
+				<text class="login" @click="login">
+					<text style="color: white;font-size: 48upx;font-weight: 500;" >登录 · 注册</text>
 				</text>
-				<text class="reuser" style="color: white; font-size: 30upx;position: relative;top: -30upx;">
-					<navigator url="../login/login">切换用户</navigator>
+				<text @click="login()" class="reuser" style="color: white; font-size: 30upx;position: relative;top: 0upx;">
+					<text>切换用户</text>
 				</text>
 			</view>
 			<view class="middle">
@@ -20,7 +20,7 @@
 			</view>
 			<view class="mine-list">
 				<view class="list-item" v-for="item in list">
-					{{item}}
+					<navigator class="nav" animation-duration="200" :url="item.path" open-type="navigate">{{item.msg}}</navigator>
 					<text class="sanjiao">▲</text>
 				</view>
 			</view>
@@ -33,17 +33,43 @@
 		data() {
 			return {
 				list:[
-					"我发布的项目",
-					"我支持的项目",
-					"我关注的项目",
-					"我参与的项目",
-					"项目资金",
-					"个人资产"
+					{
+						msg:"我发布的项目",
+						path:"../choice/choice"
+					},
+					{
+						msg:"我支持的项目",
+						path:"../choice/choice"
+					},
+					{
+						msg:"我关注的项目",
+						path:"../choice/choice"
+					},
+					{
+						msg:"我参与的项目",
+						path:"../choice/choice"
+					},
+					{
+						msg:"项目资金",
+						path:"../choice/choice"
+					},
+					{
+						msg:"个人资产",
+						path:"../choice/choice"
+					}
 					]
 			}
 		},
 		methods: {
-			
+			login:event =>{
+				uni.redirectTo({
+					url:"../login/login",
+					success: (e) => {
+						console.log(e+"suc")
+					}
+					
+				})
+			}
 		}
 	}
 </script>
@@ -51,7 +77,7 @@
 <style>
 .title{
 	width: 750upx;
-	height: 260upx;
+	height: 320upx;
 	background-color: #007AFF;
 	display: flex;
 	align-items: center;
@@ -92,9 +118,16 @@
 }
 .list-item{
 	padding: 20upx;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+}
+.nav{
+	flex: 9;
 }
 .sanjiao{
-	float: right;
+	
 	transform: rotate(90deg);
 }
 </style>

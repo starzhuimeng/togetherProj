@@ -1,7 +1,7 @@
 
 .title{
 	width: 750rpx;
-	height: 260rpx;
+	height: 320rpx;
 	background-color: #007AFF;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -81,11 +81,32 @@
 }
 .list-item{
 	padding: 20rpx;
+	vertical-align: middle;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-align-content: space-between;
+	    -ms-flex-line-pack: justify;
+	        align-content: space-between;
+}
+.nav{
+	-webkit-box-flex: 9;
+	-webkit-flex: 9;
+	    -ms-flex: 9;
+	        flex: 9;
 }
 .sanjiao{
-	float: right;
+	
 	-webkit-transform: rotate(90deg);
+	
 	    -ms-transform: rotate(90deg);
+	
 	        transform: rotate(90deg);
 }
 
