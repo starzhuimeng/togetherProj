@@ -1,16 +1,26 @@
 {
   "pages": [
+    "pages/details/details",
+    "pages/protype/protype",
+    "pages/sponso/sponsor",
     "pages/mine/mine",
     "pages/index/index",
     "pages/losepass/losepass",
     "pages/register/register",
     "pages/login/login",
-    "pages/protype/protype",
     "pages/choice/choice",
     "pages/search/search",
     "pages/condition/condition",
     "pages/newproj/newproj",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/fabu/fabu",
+    "pages/guanzhu/guanzhu",
+    "pages/canyu/canyu",
+    "pages/userInfo/userInfo",
+    "pages/renzheng/renzheng",
+    "pages/addcard/addcard",
+    "pages/userzichan/userzichan",
+    "pages/complate/complate"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -21,7 +31,6 @@
   "tabBar": {
     "color": "#8a8a8a",
     "selectedColor": "#049ff1",
-    "borderStyle": "#ccc",
     "backgroundColor": "#ffffff",
     "list": [
       {

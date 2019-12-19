@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "search": "/components/mehaotian-search/mehaotian-search"
+  }
+}

@@ -1,0 +1,1 @@
+<view><view class="content"><block wx:for="{{proInfo}}" wx:for-item="item" wx:for-index="index"><view data-event-opts="{{[['tap',[['toProPage',['$0'],['proInfo.'+index+'.url']]]]]}}" class="proj-item" bindtap="__e"><image class="pro-image" src="{{proInfo[index].imagePath}}" mode></image><text class="pro-title">{{proInfo[index].title}}</text></view></block></view></view>

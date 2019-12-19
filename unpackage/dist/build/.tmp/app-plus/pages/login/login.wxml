@@ -1,0 +1,1 @@
+<view class="content"><loginform vue-id="1" bind:__l="__l"></loginform><view class="btns-wrap" id="btns"><view data-event-opts="{{[['tap',[['toRegisterPage',['$event']]]]]}}" bindtap="__e">注册</view><view>|</view><view data-event-opts="{{[['tap',[['toLosePage',['$event']]]]]}}" bindtap="__e">忘记密码</view></view></view>

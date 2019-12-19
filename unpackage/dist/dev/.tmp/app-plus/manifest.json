@@ -4,7 +4,7 @@
     "iPhone",
     "iPad"
   ],
-  "id": "",
+  "id": "__UNI__1C0227C",
   "name": "togetherProj",
   "version": {
     "name": "1.0.0",
@@ -102,7 +102,6 @@
     "tabBar": {
       "color": "#8a8a8a",
       "selectedColor": "#049ff1",
-      "borderStyle": "#ccc",
       "backgroundColor": "#ffffff",
       "list": [
         {
@@ -136,11 +135,8 @@
           "text": "个人中心"
         }
       ],
-      "height": "50px",
-      "child": [
-        "lauchwebview"
-      ],
-      "selected": 4
+      "borderStyle": "rgba(0,0,0,0.4)",
+      "height": "50px"
     }
   }
 }

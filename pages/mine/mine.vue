@@ -15,7 +15,7 @@
 				</view>
 				<view class="second">
 					<image src="../../static/touxiang.jpeg" style="width: 200upx; height: 200upx; overflow: hidden;border-radius: 50%; position: absolute;right: 60upx;top: -100upx;" mode=""></image>
-					<text style="line-height: 280upx;position: relative;left: 165upx;font-size: 30upx;">个人信息</text>
+					<text style="line-height: 280upx;position: relative;left: 165upx;font-size: 30upx;" @click="toUserInfo">个人信息</text>
 				</view>
 			</view>
 			<view class="mine-list">
@@ -35,7 +35,7 @@
 				list:[
 					{
 						msg:"我发布的项目",
-						path:"../choice/choice"
+						path:"../fabu/fabu"
 					},
 					{
 						msg:"我支持的项目",
@@ -43,11 +43,11 @@
 					},
 					{
 						msg:"我关注的项目",
-						path:"../choice/choice"
+						path:"../guanzhu/guanzhu"
 					},
 					{
 						msg:"我参与的项目",
-						path:"../choice/choice"
+						path:"../canyu/canyu"
 					},
 					{
 						msg:"项目资金",
@@ -55,7 +55,7 @@
 					},
 					{
 						msg:"个人资产",
-						path:"../choice/choice"
+						path:"../userzichan/userzichan"
 					}
 					]
 			}
@@ -68,6 +68,12 @@
 						console.log(e+"suc")
 					}
 					
+				})
+			},
+			toUserInfo(){
+				uni.navigateTo({
+					url:"../userInfo/userInfo",
+					animationDuration:200
 				})
 			}
 		}

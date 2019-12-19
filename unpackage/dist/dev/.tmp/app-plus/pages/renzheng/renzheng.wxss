@@ -1,0 +1,82 @@
+
+.theme{
+	width: 100%;
+	height: 650rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:column;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
+}
+.occup{
+	width: 100%;
+	height: 10rpx;
+	background-color: #F1F1F1;
+}
+.theme_cont{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	/* text-align: center; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 10rpx;
+}
+.put{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	padding-top: 35rpx;
+	padding-left: 30rpx;
+}
+.input{
+	-webkit-box-flex: 3;
+	-webkit-flex: 3;
+	    -ms-flex: 3;
+	        flex: 3;
+	padding-top: 40rpx;
+}
+.typeface{
+	font-size: 35rpx;
+	color: #555555;
+}
+.desc_typeface{
+	font-size: 30rpx;
+	color: #999;
+}
+.surplus{
+	width: 100%;
+	height: 600rpx;
+	background-color: #F1F1F1;
+	padding-top: 70rpx;
+}
+.but_style{
+	width: 660rpx;
+	background: #007AFF;
+	color: #FFFFFF;
+	margin-bottom: 30rpx;
+	/* margin-top: 50upx; */
+}
+.deal_typeface{
+	font-size:25rpx;
+	color: #555555;
+	/* margin-left: 70upx; */
+}
+.surplus_typeface{
+	width: 640rpx;
+	text-align: center;
+	padding-left: 50rpx;
+}
+.surplus ._span ._a{
+	text-decoration:none;
+}	
+
+

@@ -1,22 +1,53 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path" : "pages/details/details",
+		    "style" : {
+				"navigationStyle":"custom",
+				"backgroundColor":"#ccc"
+			}
+		},{
+			"path": "pages/protype/protype",
+			"style": {
+				"navigationBarTitleText": "选择发起类型"
+			}
+		},{
+			"path": "pages/sponso/sponsor",
+			"style": {
+				"navigationBarTitleText": "发起项目"
+			}
+		},{
 		    "path" : "pages/mine/mine",
 		    "style" : {
 				"navigationStyle":"custom"
 			}
 		},{
-			"path": "pages/index/index",
-			"style": {
-				"navigationStyle":"custom",
-				
-				"app-plus": {
-				    "bounce": "none",
-				    "titleNView": false
-				},
-				"statusbar":"red"
-			}
-		},{
+            "path": "pages/index/index",
+            "style": {
+            	"navigationBarTitleText": "导航栏带搜索框",
+            	"app-plus": {
+            		"titleNView": {
+            			"type": "default",
+            			"titleColor": "#fff",
+            			"backgroundColor": "#fff",
+            			"buttons": [{
+            				"text": "搜索",
+            				"width": "40px",
+            				"fontSize": "16px",
+            				"color": "#000",
+            				"background": "rgba(0,0,0,0)"
+            			}],
+            			"searchInput": {
+            				"backgroundColor": "#eee",
+            				"borderRadius": "60px",
+            				"placeholder": "请输入要搜索的内容",
+            				"disabled": false
+            			}
+            		}
+            	},
+				"enablePullDownRefresh":true
+            }
+        },{
 		    "path" : "pages/losepass/losepass",
 		    "style" : {
 				"navigationBarTextStyle":"black",
@@ -35,11 +66,6 @@
 				"navigationBarTitleText":"登录"
 			}
 		},{
-			"path": "pages/protype/protype",
-			"style": {
-				"navigationBarTitleText": "选择发起类型"
-			}
-		},{
 				"path": "pages/choice/choice",
 				"style": {
 				"navigationBarTitleText": "我支持的项目"
@@ -51,15 +77,65 @@
 			}
 		},{
             "path" : "pages/condition/condition",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText":"动态"
+			}
         },{
             "path" : "pages/newproj/newproj",
             "style" : {}
         },{
             "path" : "pages/message/message",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText":"消息"
+			}
         }
         
+        ,{
+            "path" : "pages/fabu/fabu",
+            "style" : {
+				"navigationBarTitleText":"我发布的项目"
+			}
+        },{
+		    "path" : "pages/guanzhu/guanzhu",
+		    "style" : {
+				"navigationBarTitleText":"我关注的项目"
+			}
+		},{
+		    "path" : "pages/canyu/canyu",
+		    "style" : {
+				"navigationBarTitleText":"我参与的项目"
+			}
+		},{
+            "path" : "pages/userInfo/userInfo",
+            "style" : {
+				"navigationBarTitleText":"个人信息"
+			}
+        }
+        ,{
+            "path" : "pages/renzheng/renzheng",
+            "style" : {
+				"navigationBarTitleText":"实名认证"
+			}
+        }
+        ,{
+            "path" : "pages/addcard/addcard",
+            "style" : {
+				"navigationBarTitleText":"添加银行卡"
+			}
+        }
+        ,{
+            "path" : "pages/userzichan/userzichan",
+            "style" : {
+				"navigationBarTitleText":"个人资产"
+			}
+        }
+        
+        ,{
+            "path" : "pages/complate/complate",
+            "style" : {
+				"navigationBarTitleText":"提交成功"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -80,7 +156,7 @@
 	"tabBar": {
 	    "color": "#8a8a8a",
 	    "selectedColor": "#049ff1",
-	    "borderStyle": "#ccc",
+	    // "borderStyle": "#ccc",
 	    "backgroundColor": "#ffffff",
 	    "list": [{
 	        "pagePath": "pages/index/index",

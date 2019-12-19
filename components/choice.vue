@@ -1,6 +1,7 @@
 <!-- 模板 -->
 <template>
 	<view>
+		<!-- 我支持的项目页面 -->
 		<view class="content">
 			<!-- 上部分 -->
 			<nav class="upper">

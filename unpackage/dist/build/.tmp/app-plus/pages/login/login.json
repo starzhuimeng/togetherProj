@@ -1,0 +1,7 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "登录",
+  "usingComponents": {
+    "loginform": "/components/loginForm"
+  }
+}

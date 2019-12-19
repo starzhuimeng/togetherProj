@@ -38,7 +38,9 @@
 		methods: {
 			getType(type){
 				this.proType = type
-				console.log(this.proType)
+				uni.navigateTo({
+					url:"../sponso/sponsor?proType="+this.proType
+				})
 			}
 		},
 		components:{

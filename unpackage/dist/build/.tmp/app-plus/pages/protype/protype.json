@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择发起类型",
+  "usingComponents": {
+    "plate": "/components/projtype"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/protype/protype",
+    "pages/sponso/sponsor",
+    "pages/mine/mine",
+    "pages/index/index",
+    "pages/losepass/losepass",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/choice/choice",
+    "pages/search/search",
+    "pages/condition/condition",
+    "pages/newproj/newproj",
+    "pages/message/message",
+    "pages/fabu/fabu",
+    "pages/guanzhu/guanzhu",
+    "pages/canyu/canyu",
+    "pages/userInfo/userInfo"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#049ff1",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tab-icons/home.png",
+        "selectedIconPath": "static/tab-icons-active/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/condition/condition",
+        "iconPath": "static/tab-icons/play-circle-fill.png",
+        "selectedIconPath": "static/tab-icons-active/play-circle-fill.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/protype/protype",
+        "iconPath": "static/tab-icons/add.png",
+        "selectedIconPath": "static/tab-icons-active/add.png",
+        "text": "添加项目"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "static/tab-icons/xiaoxi.png",
+        "selectedIconPath": "static/tab-icons-active/xiaoxi.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/tab-icons/mine.png",
+        "selectedIconPath": "static/tab-icons-active/mine.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "togetherProj",
+  "compilerVersion": "2.4.2",
+  "usingComponents": {}
+}

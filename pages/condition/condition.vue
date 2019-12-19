@@ -1,4 +1,5 @@
 <template>
+	<!-- 动态页面 -->
 	<view>
 		
 	</view>
