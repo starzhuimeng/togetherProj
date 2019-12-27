@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"content{ padding:",[0,20]," ",[0,40]," ",[0,10]," ",[0,40],"; }\n.",[1],"proj-item{ margin-bottom: ",[0,20],"; }\n.",[1],"pro-image{ padding: ",[0,20]," ",[0,0],"; }\n.",[1],"pro-title{ margin-bottom: ",[0,40],"; }\n.",[1],"radio-row{ padding: ",[0,10],"; }\n",],undefined,{path:"./pages/addProj/addProj.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/addProj/addProj.wxml') } }));

@@ -5,13 +5,13 @@
 		</view>
 		<view>
 			<!-- 分类tab栏 -->
-			<suntab :value.sync="current"  :tabList="tabObjectList" rangeKey="name"></suntab>
+			<suntab :value.sync="index" @change="objectChange" rangeKey="name" :tabList="tabObjectList"></suntab>
 		</view>
 		<!-- 用于展示项目的滚动视图 -->
 		<scroll-view show-scrollbar=false class="swiperItem"  scroll-y="true">
 			<view>
 				<!-- 使用列表循环遍历项目实例数据，包括项目图片,项目标签，用户头像，项目标题，项目描述，已筹资金，点赞人数，众筹进度 -->
-				<view class="example" v-for="(item,index) of list" :key="index">
+				<view class="example" @click="getExample(item.pid)" v-for="(item,index) of list" :key="index">
 					<view class="example-top">
 						<image :src="item.img" mode="widthFix" style="width: 100%;"></image>
 						<div class="tab-box">{{item.tab}}</div>
@@ -39,32 +39,34 @@
 </template>
 
 <script>
+	import global from "../../global.js"
 	import suntab from "../../components/sun-tab/sun-tab.vue"
 	import uniCard from '@/components/uni-card/uni-card.vue'
 	export default {
 		data() {
 			return {
-				current:0,//用于获取分类tab组件中的item
+				index:0,
+				current:"酒店",//用于获取分类tab组件中的item
 				tabObjectList: [//顶部分类tab栏的数据
 				    {
-				        name: '精选',
-				        value: 1
+				        name: '酒店',
+				        value: '酒店'
 				    },
 				    {
 				        name: '住宿',
-				        value: 1
+				        value: '住宿'
 				    },
 					{
 					    name: '餐饮',
-					    value: 1
+					    value: '餐饮'
 					},
 					{
 					    name: '农业',
-					    value: 1
+					    value: '农业'
 					},
 					{
 					    name: '开店',
-					    value: 1
+					    value: '开店'
 					}
 				],
 				list:[//项目展示的相关数据
@@ -123,9 +125,46 @@
 			}
 		},
 		onLoad() {
-			// console.log(Vue.config.path)
-			console.log(this.$global.serverPath)
+			uni.request({
+				url:global.serverPath+"/yiqiba/setpro",
+				method:"GET",
+				data:{
+					type:"酒店"
+				},
+				success:res => {
+					console.log(res)
+					this.list = res.data
+				},
+				fail:res => {
+					console.log(res)
+				}
+			})
+		},
+		onReady(e) {
 			
+		},
+		onShow() {
+			console.log(this.$global.getRandom())
+			console.log(this.$global.serverPath)
+			uni.request({
+				url:this.$global.serverPath+"/yiqiba/setpro",
+				method:"GET",
+				data:{
+					type:"精选"
+				},
+				success(res) {
+					console.log(res.data)
+					this.list = res.data
+					console.log(this.list)
+					// this.list = res.data
+				},
+				fail(res) {
+					uni.showToast({
+						title: '内容获取失败，请检查网络连接'
+					});
+				}
+				
+			})
 		},
 		methods: {
 			arrayChange(e){
@@ -134,12 +173,16 @@
 			            },
 			objectChange(e){
 			    console.log('对象数据返回格式');
-			    console.log(e);
+			    console.log(e.tab.value);
+				this.current = e.tab.value
+				console.log("类别："+this.current)
 			},
 			//分类tab栏状态改变时调用的函数
-			change(e){
-				this.current = e.detail.current;
-				console.log("current:"+this.current)
+			
+			getExample(pid){
+				uni.navigateTo({
+					url:"../details/details?"
+				})
 			}
 			
 			
@@ -177,6 +220,7 @@
 					});
 				},
 				complete(res) {
+					//结束下拉刷新的loading状态
 					uni.stopPullDownRefresh()
 				}
 			})

@@ -1,1 +1,1 @@
-<view class="content"><card vue-id="1" bind:__l="__l"></card></view>
+<view class="content"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="__i0__"><view class="content"><view class="upper _nav"><image style="width:750rpx;" src="{{item.image}}" mode="widthFix"></image></view><view class="bottom _nav"><view class="lower_top _nav"><view class="_p">{{item.proName}}</view></view><view class="lower_below _nav"><text>{{"已筹￥"+item.zijin}}</text><text>{{"参股占比"+item.gufen+"%"}}</text></view></view></view></block></view>

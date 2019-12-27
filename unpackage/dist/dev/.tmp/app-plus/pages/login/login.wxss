@@ -1,5 +1,83 @@
 
 .content{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	padding: 50rpx;
+}
+.title{
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	color: white;
+	font-size: 100rpx;
+}
+.fixed{
+	width: 750rpx;
+	position: absolute;
+	top: 60%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.form-item{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center; 	
+	padding: 30rpx 10rpx;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-align-content: center;
+	    -ms-flex-line-pack: center;
+	        align-content: center;
+}
+.label{
+	text-align: center;
+	width: 150rpx;
+	font-size: 30rpx;
+	color: #666;
+}
+.input{
+	color: #666;
+	border-bottom: 1px solid #ccc;
+	-webkit-box-flex: 8;
+	-webkit-flex: 8;
+	    -ms-flex: 8;
+	        flex: 8;
+	padding: 5rpx 20rpx;
+	
+	font-size: 30rpx;
+}
+.vcode{
+	width: 160rpx;
+	height: 80rpx;
+}
+.loginbtn{
+	width: 100%;
+}
+.btn{
+	margin: 40rpx;
 }
 .btns-wrap{
 	display: -webkit-box;

@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "我支持的项目",
-  "usingComponents": {
-    "card": "/components/choice"
-  }
+  "usingComponents": {}
 }

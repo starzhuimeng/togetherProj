@@ -110,7 +110,6 @@
 	.occup{
 		width: 100%;
 		height: 10upx;
-		background-color: #F1F1F1;
 	}
 	.theme_cont{
 		flex: 1;

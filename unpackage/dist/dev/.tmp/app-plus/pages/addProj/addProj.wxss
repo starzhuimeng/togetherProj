@@ -1,0 +1,17 @@
+
+.content{
+	padding:20rpx 40rpx 10rpx 40rpx;
+}
+.proj-item{
+	margin-bottom: 20rpx;
+}
+.pro-image{
+	padding: 20rpx 0rpx;
+}
+.pro-title{
+	margin-bottom: 40rpx;
+}
+.radio-row{
+	padding: 10rpx;
+}
+

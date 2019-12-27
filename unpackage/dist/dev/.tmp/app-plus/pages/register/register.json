@@ -1,7 +1,5 @@
 {
   "navigationBarTextStyle": "black",
   "navigationBarTitleText": "注册",
-  "usingComponents": {
-    "regi": "/components/registerForm"
-  }
+  "usingComponents": {}
 }

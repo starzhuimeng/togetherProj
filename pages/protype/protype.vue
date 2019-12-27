@@ -2,17 +2,17 @@
 	<view>
 		<view>
 			<view class="content">
-				<view class="content-item" @click="getType('zhongchou')">
+				<view class="content-item" @click="getType(1)">
 					<image src="../../static/static-projtype/zhongchou.png"  mode="aspectFill"></image>
 					<text class="title">众筹</text>
 					<text class="massage">我有望成行的商业项目</text>
 				</view>
-				<view class="content-item" @click="getType('gongyi')">
+				<view class="content-item" @click="getType(2)">
 					<image src="../../static/static-projtype/gongyi.png"  mode="aspectFill"></image>
 					<text class="title">公益</text>
 					<text class="massage">日照养老院更新换代</text>
 				</view>
-				<view class="content-item" @click="getType('chuangyi')">
+				<view class="content-item" @click="getType(3)">
 					<image src="../../static/static-projtype/chuangyi.png"  mode="aspectFill"></image>
 					<text class="title">创意</text>
 					<text class="massage">你的新奇想法塑造成型</text>

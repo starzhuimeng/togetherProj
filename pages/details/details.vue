@@ -23,6 +23,7 @@
 </template>
 
 <script>
+	import global from "../../global.js"
 	export default {
 		data() {
 			return {
@@ -31,6 +32,7 @@
 				title:"长沙小吃"
 			}
 		},
+		
 		methods: {
 			
 		}

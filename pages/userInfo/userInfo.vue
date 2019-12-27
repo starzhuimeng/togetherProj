@@ -1,13 +1,14 @@
 <template>
 	<view class="content">
+		<!-- 用户信息页面 -->
 		<view class="theme">
 			<view class="theme_cont" style="border-top: 10upx solid #F1F1F1;">
 				<view class="put">头像</view>
-				<view class="input">1</view>
+				<view class="input">{{userInfo.head}}</view>
 			</view>
 			<view class="theme_cont" style="border-top: 4upx solid #F1F1F1;">
 				<view class="put">昵称</view>
-				<view class="input">啦啦啦&nbsp;&nbsp;></view>
+				<view class="input">{{userInfo.nickname}}</view>
 			</view>
 			<view class="theme_cont" style="border-top: 4upx solid #F1F1F1;">
 				<view class="put">收货地址管理</view>
@@ -15,7 +16,7 @@
 			</view>
 			<view class="theme_cont" style="border-top: 4upx solid #F1F1F1;">
 				<view class="put">账号</view>
-				<view class="input">123456789&nbsp;&nbsp;></view>
+				<view class="input">{{account}}</view>
 			</view>
 			<view class="theme_cont" @click="renzheng" style="border-top: 4upx solid #F1F1F1;">
 				<view class="put">实名认证</view>
@@ -29,14 +30,32 @@
 </template>
 
 <script>
+	import global from "../../global.js"
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				account:"",
+				title: 'Hello',
+				userInfo:{}
 			}
 		},
 		onLoad() {
-
+			this.account = global.account
+			this.userInfo = global.userInfo
+		},
+		onShow() {
+			console.log("个人信息 show")
+			uni.request({
+				method:"GET",
+				url:global.serverPath+"/yiqiba/User/PersonInfo?account=" + this.account,
+				
+				success:res => {
+					console.log(this.account)
+				},
+				fail(res) {
+					console.log(this.account)
+				}
+			})
 		},
 		methods: {
 			finish(){

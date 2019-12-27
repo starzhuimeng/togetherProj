@@ -11,6 +11,7 @@
 </template>
 
 <script>
+	import global from "../../global.js"
 	export default {
 		data() {
 			return {
@@ -41,7 +42,8 @@
 						title:"测试用的项目名",
 						url:"#"
 					}
-				]
+				],
+				account:""
 			}
 		},
 		methods: {
@@ -68,15 +70,17 @@
 		},
 		//页面加载的生命周期函数，此函数在页面渲染之前执行
 		onLoad() {
+			this.account = global.account
 			uni.request({
 				method:"GET",//请求方式
-				url:"",//请求地址
+				url:global.serverPath+"/yiqiba/User/MyProject/brief",//请求地址
 				data:{
+					account:this.account
 					//发送到服务器的数据
 				},
-				success(res) {
+				success: res => {
 					//请求成功后的回调函数，res==response
-					
+					console.log(res)
 					//调用原生消息提醒，title:提示消息，icon:提示附带的图标，默认success
 					uni.showToast({
 						title:"请求成功",
@@ -84,6 +88,7 @@
 					})
 					
 					//将得到的数据放到数据模板proInfo中，利用vue的双向数据绑定完成数据更新
+					
 					this.proInfo = res.data;
 				},
 				fail(res) {
@@ -93,6 +98,7 @@
 						title:"请求失败",
 						icon:"none"
 					})
+					console.log(res)
 				}
 				
 			})

@@ -1,21 +1,22 @@
 <template>
 	<view class="content">
 		<scroll-view class="content" scroll-y="flase">
-			<!-- 第一项 -->
+			
+			<!-- 选择项目类型 -->
 			<view class="page_one">
 				<view class="one_content_first">
-					<span class="one_title_type">1.请选择项目类型<image src="../../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
+					<span class="one_title_type">1.请选择项目类型<image v-show="" src="../../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
 					<span class="one_minute_type">明确项目类型有助于快速找到你的项目</span></view>
-				<view class="one_content" @click="type('jiudian')" name="">
+				<view class="one_content" @click="type(1)" name="">
 					<view class="img"><image class="image" src="../../static/sponsorpicture/jichu1.png"></image></view>
 					<view class="minute"><span class="one_title_type">酒店</span><br>
 					<span class="one_minute_type">经济/终端/高端连锁酒店.度假酒店.城市长租公寓</span></view></view>
-				<view class="one_content" @click="type('nongye')" name="">
+				<view class="one_content" @click="type(2)" name="">
 					<view class="img"><image class="image" src="../../static/sponsorpicture/jichu2.png"></image></view>
 					<view class="minute"><span class="one_title_type">农业</span><br>
 					<span class="one_minute_type">农产品.种植基地.养殖基地.果蔬生鲜门店.新型农场.休闲产品.农产品加工等</span></view>
 				</view>
-				<view class="one_content" @click="type('canyin')" name="">
+				<view class="one_content" @click="type(3)" name="">
 					<view class="img">
 						<image class="image" src="../../static/sponsorpicture/jichu3.png"></image>
 					</view>
@@ -24,19 +25,20 @@
 						<span class="one_minute_type">酒吧.果蔬饮品.咖啡馆.各大菜系.茶馆.面包甜点.小吃简餐等</span>
 					</view>
 				</view>
-				<view class="one_content" @click="type('xiuxian')" name="">
+				<view class="one_content" @click="type(4)" name="">
 					<view class="img"><image class="image" src="../../static/sponsorpicture/jichu4.png"></image></view>
 					<view class="minute"><span class="one_title_type">休闲</span><br>
 					<span class="one_minute_type">美业(美甲美瞳/美容/美发/SPA/健身/大健康).亲子娱乐.培训.宠物空间.美学家装.新零售(花店/书店/综合空间).文创等</span></view>
 				</view>
-				<view class="one_content" @click="type('minsu')" name="">
+				<view class="one_content" @click="type(5)" name="">
 					<view class="img"><image class="image" src="../../static/sponsorpicture/jichu5.png"></image></view>
 					<view class="minute"><span class="one_title_type">民宿</span><br>
 					<span class="one_minute_type">精品酒店.文创小镇.乡村民宿.青旅.城市民宿.海外民宿等</span></view>
 				</view>
 			</view>
-			<view>
-			<!-- 第二项 -->
+			
+			
+			<!-- 项目基础信息，包括项目名称，项目所在地，预计开业时间 -->
 			<view class="page_two">
 					<view class="two_centent">
 					<span class="two_title_type">2.请填写项目基础信息<image src="../../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
@@ -49,26 +51,35 @@
 					</view>
 					<view class="two_centent">
 						<view class="two_centent_">
+						<span class="two_minute_type"><image class="two_img" src="../../static/sponsorpicture/icon_GPS.png"></image>项目预计融资</span><br>
+						<input type="number" id="place" class="input" v-model="finance" placeholder="预计融资决定项目大小" /></view>
+					</view>
+					<view class="two_centent">
+						<view class="two_centent_">
 						<span class="two_minute_type"><image class="two_img" src="../../static/sponsorpicture/icon_GPS.png"></image>开业时间(或举办活动时间)</span><br>
-						<input type="text" id="time" class="input" v-model="proSTime" placeholder="如果未开始请选择预计开始时间" /></view>
+						<picker mode="date" @change="timeChange" start="">
+							<button type="primary">选择项目开始时间</button>
+						</picker>
 					</view>
 			</view>				
 			</view>
-			<!-- 第三项 -->
+			
+			<!-- 选择项目种类 -->
 			<view>
 				<span class="thr_title_type">3.选择项目分类<image src="../../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
 				<span class="thr_minute_type">明确的项目分类有助于运营同学快速审核你的项目</span><br>
-				<radio-group @change="itemtype"  v-model="proClass">
+				<radio-group @change="classChange"  v-model="proClass">
 				<view class="radio_minute_type" >
 					<label><radio class="radio" value="权益类"/>权益类(股份/分红权转让)</label></view>
 				 <view class="radio_minute_type" >
 					<label><radio class="radio" value="广告类" />广告类(售卖产品/加盟代理)</label></view>
 				</radio-group>
 			</view>
-			<!-- 第四项 -->
+			
+			<!-- 选择是否拥有营业场地，独立运行的公司 -->
 			<view>
 				<span class="thr_title_type">4.是否拥有营业场地<image src="../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
-				<radio-group  @change="itemtype" v-model="havePlace" > 
+				<radio-group  @change="pleaceChange" v-model="havePlace" > 
 					<view class="radio_minute_type">
 						<label><radio class="radio" value="true"/>是</label>
 					</view>
@@ -77,10 +88,9 @@
 					</view>
 				</radio-group>
 			</view>
-			<!-- 第五项 -->
 			<view class="five_title">
 				<span class="thr_title_type">5.是否有独立运行该项目及财务核算的公司<image src="../../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
-				<radio-group  @change="itemtype" v-model="haveComp">
+				<radio-group  @change="compChange" v-model="haveComp">
 					<view class="radio_minute_type">
 						<label><radio class="radio" value="true"/>是</label>
 					</view>
@@ -89,38 +99,12 @@
 					</view>
 				</radio-group>
 			</view>
-			<!-- 第六项 -->
-			<view class="five_title">
-				<span class="thr_title_type">6.请上传项目图片(场景图片.设计图片等)<image src="../static/sponsorpicture/star.png" class="content_xing"></image></span><br>		
-				<image  v-for="index in imgPathObj" :src="index" mode="aspectFit"></image>
-				<button @click="upload" style="margin: 40upx 0upx;">添加图片</button>
-			</view>
-			<!-- 第七项 -->
-			<view class="five_title">
-				<span class="thr_title_type">7.请介绍项目核心团队<image src="../../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
-				<view class="seven_frame">
-					<view class="seven_mess">
-					<view class="seven_name">				
-						<input class="seven_input" type="text" placeholder="姓名" v-model="name"/>
-					</view>
-					<span class="line"></span>
-					<view class="seven_role">
-						<input class="seven_input" type="text" placeholder="团队角色" v-model="role"/>	
-					</view>
-					</view>
-					<view class="seven_back">
-						<textarea class="seven_back" placeholder="请填写团队成员背景" maxlength="60" v-model="back"></textarea>
-					</view>
-				</view>
-				<!-- 第七项的添加成员按钮 -->
-				<button @click="addUser" style="margin: 40upx 0upx;">添加成员</button>
-				<!-- <view class="seven_btn">
-					<span class="one_minute_type">添加成员</span>
-				</view> -->
-			</view>
-				<!-- 第八项 -->
+			
+			
+			
+			<!-- 项目描述 -->
 			<view>
-				<span class="thr_title_type">8.请简单介绍你的项目<image src="../../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
+				<span class="thr_title_type">6.请简单介绍你的项目<image src="../../static/sponsorpicture/star.png" class="content_xing"></image></span><br>
 				<view class="eight">
 					<span class="eight_minu">
 						项目介绍是我们进行评判的重要标准<br>
@@ -133,7 +117,7 @@
 					<textarea class="seven_back" v-model="message" placeholder="请填写项目介绍"></textarea>
 				</view>
 			</view>
-				<!-- 第九项 -->
+				<!-- 协议 -->
 			<view class="nine">
 				<checkbox-group>
 					<label>
@@ -157,27 +141,35 @@
 </template>
 
 <script>
+	import global from "../../global.js"
 	export default {
 		data() {
 			return {
-				choiceType:"",
-				proType:"", //选择的项目类型
+				choiceType:0,
+				proType:0, //选择的项目类型
 				proName:"",   //品牌名称
 				proAddress:"",  //项目所在地
 				proSTime:"",  // 项目的预计开业时间
 				proClass:"", // 项目分类
 				havePlace:"",// 是否拥有场地
 				haveComp:"",// 是否有独立该项目及财务核算
-				member:[{
+				// member:[{//项目成员
 						
-					}],
-				message:"",
-				imgPathObj:[],
-				index:0,
-				name:"",
-				role:"",
-				back:"",
-				isChecked:false
+				// 	}],
+				finance:0,
+				message:"",//项目描述
+				// imgPathObj:[],//项目图片
+				index:0,//
+				// name:"",//成员姓名
+				// role:"",//成员职位
+				// back:"",//成员背景
+				isChecked:false,//协议
+				one:false,
+				two:false,
+				three:false,
+				four:false,
+				five:false,
+				six:false
 			}
 		},
 		methods: {
@@ -185,83 +177,78 @@
 			send(){
 				console.log("send")
 				uni.request({
-					method:"GET",
-					url:"",
+					method:"POST",
+					url:this.$global.serverPath+"/yiqiba/pro",
 					data:{
-						uproType:this.proType,
+						pid:this.$global.getPid(),
+						uproType:this.proType
 					}
 				})
 			},
+			timeChange(e){
+				this.proSTime = e.detail.value;
+			},
 			//单选按钮
-			
-			
+			classChange(e){
+				this.proClass = e.detail.value
+			},
+			pleaceChange(e){
+				this.havePlace = e.detail.value
+			},
+			compChange(e){
+				this.haveComp = e.detail.value
+			},
+			//项目类型选择
 			type(name){
-				switch(name){
-					case 'jiudian':
-					this.proType = name;
-					console.log(this.proType)
-					break;
-					case 'nongye':
-					this.proType = name;
-					console.log(this.proType)
-					break;
-					case 'canyin':
-					this.proType = name;
-					console.log(this.proType)
-					break;
-					case 'xiuxian':
-					this.proType = name;
-					console.log(this.proType)
-					break;
-					case 'minsu':
-					this.proType = name;
-					console.log(this.proType)
-					break;
-				}
+				this.proType = name
 			},
-			upload(){
-				// plus.gallery.pick(function(GalleryMultiplePickSuccessCallback){
+			//添加图片调用的函数
+			// upload(){
+			// 	// plus.gallery.pick(function(GalleryMultiplePickSuccessCallback){
 					
-				// },function(e){
-				// 	// console.log(e)
-				// },{
-				// 	filter:"image",
-				// 	filename:"tupiann",
-				// 	animation:true,
-				// 	maximum:8,
-				// 	onmaxed() {
-				// 		uni.showToast({
-				// 			title:"最多可以选择六张图片",
-				// 			icon:"none"
-				// 		})
-				// 	},
-				// 	system:true
+			// 	// },function(e){
+			// 	// 	// console.log(e)
+			// 	// },{
+			// 	// 	filter:"image",
+			// 	// 	filename:"tupiann",
+			// 	// 	animation:true,
+			// 	// 	maximum:8,
+			// 	// 	onmaxed() {
+			// 	// 		uni.showToast({
+			// 	// 			title:"最多可以选择六张图片",
+			// 	// 			icon:"none"
+			// 	// 		})
+			// 	// 	},
+			// 	// 	system:true
 					
-				// })
-				uni.chooseImage({
-					count:8,
-					sizeType:"original",
-					sourceType:"album",
-					success:function(res){
-						this.imgPathObj = res.tempFilePaths
-						console.log(this.imgPathObj)
-					}.bind(this)
+			// 	// })
+			// 	uni.chooseImage({
+			// 		count:8,
+			// 		sizeType:"original",
+			// 		sourceType:"album",
+			// 		success:function(res){
+			// 			this.imgPathObj = res.tempFilePaths
+			// 			console.log(this.imgPathObj)
+			// 		}.bind(this)
 					
-				})
-			},
-			addUser(){
-				var temp = {
-					"name":this.name,
-					"role":this.role,
-					"back":this.back
-				}
-				this.member.push(temp)
-				console.log(this.member)
-			},
+			// 	})
+			// },
+			//添加团队成员调用的函数
+			// addUser(){
+			// 	var temp = {
+			// 		"name":this.name,
+			// 		"role":this.role,
+			// 		"back":this.back
+			// 	}
+			// 	this.member.push(temp)
+			// 	console.log(this.member)
+			// },
+			//用户点击保存调用的函数
 			saveToStorage(){
 				console.log("保存")
+				//将数据加载进缓存，当页面加载时，如果缓存中有对应数据，则自动填入数据模板
 				uni.setStorage({
-					key:"account",
+					key:global.account,
 					data:{
 						choiceType:this.choiceType,
 						proType:this.proType, //选择的项目类型
@@ -271,13 +258,13 @@
 						proClass:this.proClass, // 项目分类
 						havePlace:this.havePlace,// 是否拥有场地
 						haveComp:this.haveComp,// 是否有独立该项目及财务核算
-						member:this.member,
+						// member:this.member,
 						message:this.message,
-						imgPathObj:this.imgPathObj,
+						// imgPathObj:this.imgPathObj,
 						index:this.index,
-						name:this.name,
-						role:this.role,
-						back:this.back,
+						// name:this.name,
+						// role:this.role,
+						// back:this.back,
 						isChecked:this.isChecked
 					},
 					success() {
@@ -295,6 +282,7 @@
 					
 				})
 			},
+			//用户点击提交执行的函数
 			projCommit(){
 				console.log("提交项目")
 				if(this.proType== ""){
@@ -338,7 +326,7 @@
 						title: '请填写项目介绍',
 						icon:'none'
 					});
-				}else if(!this.isChecked){
+				}else if(this.isChecked){
 					uni.showToast({
 						title: '请同意协议',
 						icon:'none'
@@ -346,10 +334,35 @@
 				}else{
 					uni.request({
 						method:"GET",
-						url:"",
-						data:{},
+						url:global.serverPath + "/yiqiba/pro",
+						data:{
+							pid:global.getPid(),
+							type:this.choiceType,
+							cid:this.proType,
+							plocation:this.proAddress,
+							pdate:this.proSTime,
+							pint:this.message,
+							pname:this.proName,
+							finance:this.finance,
+							site:this.havePlace,
+							company:this.haveComp,
+							pcca:this.proClass,
+							stid:2
+							
+						},
 						success(res) {
-							console.log(res)
+							uni.showToast({
+								title: '发布成功',
+								icon:"none"
+							});
+							if(res.data){
+								uni.redirectTo({
+									url:"../fabu/fabu",
+									success() {
+										
+									}
+								})
+							}
 						},
 						fail(e) {
 							console.log(e)
@@ -364,33 +377,48 @@
 		onLoad(option) {
 			console.log(option.proType)
 			this.choiceType = option.proType
-			uni.getStorage({
-				key:"account",
-				success:function(res){
-					console.log(res)
-					this.choiceType = res.data.choiceType
-					this.proType = res.data.proType//选择的项目类型
-					this.proName = res.data.proName  //品牌名称
-					this.proAddress = res.data.proAddress //项目所在地
-					this.proSTime = res.data.proSTime // 项目的预计开业时间
-					this.proClass = res.data.proClass// 项目分类
-					this.havePlace = res.data.havePlace// 是否拥有场地
-					this.haveComp = res.data.haveComp// 是否有独立该项目及财务核算
-					this.member = res.data.member
-					this.message = res.data.message
-					this.imgPathObj = res.data.imgPathObj
-					this.index = res.data.index
-					this.name = res.data.name
-					this.role = res.data.role
-					this.back = res.data.back
-					this.isChecked = res.data.isChecked
-				}.bind(this),
-				fail:function(){
-				},
-				complete:function(){
-					console.log("缓存加载完成")
-				}
-			})
+			//当页面加载时，将缓存中的数据加载进数据模板
+			
+			// uni.showModal({
+			// 	title:"发起项目",
+			// 	content:"是否显示上次未提交的数据？",
+			// 	showCancel:true,
+			// 	success(con,can) {
+			// 		if(can){
+			// 			uni.getStorage({
+			// 				key:"account",
+			// 				success:function(res){
+			// 					console.log(res)
+			// 					this.choiceType = res.data.choiceType
+			// 					this.proType = res.data.proType//选择的项目类型
+			// 					this.proName = res.data.proName  //品牌名称
+			// 					this.proAddress = res.data.proAddress //项目所在地
+			// 					this.proSTime = res.data.proSTime // 项目的预计开业时间
+			// 					this.proClass = res.data.proClass// 项目分类
+			// 					this.havePlace = res.data.havePlace// 是否拥有场地
+			// 					this.haveComp = res.data.haveComp// 是否有独立该项目及财务核算
+			// 					this.member = res.data.member
+			// 					this.message = res.data.message
+			// 					this.imgPathObj = res.data.imgPathObj
+			// 					this.index = res.data.index
+			// 					this.name = res.data.name
+			// 					this.role = res.data.role
+			// 					this.back = res.data.back
+			// 					this.isChecked = res.data.isChecked
+			// 				}.bind(this),
+			// 				fail:function(){
+			// 				},
+			// 				complete:function(){
+			// 					console.log("缓存加载完成")
+			// 				}
+			// 			})
+			// 		}else{
+			// 			uni.removeStorage({
+			// 				key:global.account
+			// 			})
+			// 		}
+			// 	}
+			// })
 		},
 		components:{
 		}
@@ -451,8 +479,6 @@
 .page_two{
 	display: flex;
 	flex-direction: column;
-	width: 360px;
-	height: 360px;
 }
 .two_centent{
 	flex: 1;

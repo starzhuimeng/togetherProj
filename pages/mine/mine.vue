@@ -3,7 +3,7 @@
 		<view >
 			<view class="title">
 				<text class="login" @click="login">
-					<text style="color: white;font-size: 48upx;font-weight: 500;" >登录 · 注册</text>
+					<text style="color: white;font-size: 48upx;font-weight: 500;" >{{nickname}}</text>
 				</text>
 				<text @click="login()" class="reuser" style="color: white; font-size: 30upx;position: relative;top: 0upx;">
 					<text>切换用户</text>
@@ -29,9 +29,16 @@
 </template>
 
 <script>
+	import global from "../../global.js"
 	export default {
+		
 		data() {
 			return {
+				account:"",
+				nickname:"",
+				userInfo:{
+					
+				},
 				list:[
 					{
 						msg:"我发布的项目",
@@ -60,9 +67,25 @@
 					]
 			}
 		},
+		onLoad() {
+			this.account = global.account
+			
+			uni.request({
+				url:global.serverPath+"/yiqiba/User/PersonInfo",
+				method:"GET",
+				data:{
+					account:this.account
+				},
+				success:res => {
+					global.userInfo = res.data
+					this.nickname = res.data.nickname
+				}
+			})
+			this.userInfo = global.userInfo
+		},
 		methods: {
 			login:event =>{
-				uni.redirectTo({
+				uni.navigateTo({
 					url:"../login/login",
 					success: (e) => {
 						console.log(e+"suc")

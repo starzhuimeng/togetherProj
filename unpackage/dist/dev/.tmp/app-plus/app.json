@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/addProj/addProj",
+    "pages/login/login",
     "pages/details/details",
     "pages/protype/protype",
     "pages/sponso/sponsor",
     "pages/mine/mine",
-    "pages/index/index",
     "pages/losepass/losepass",
     "pages/register/register",
-    "pages/login/login",
     "pages/choice/choice",
     "pages/search/search",
     "pages/condition/condition",
@@ -20,7 +21,8 @@
     "pages/renzheng/renzheng",
     "pages/addcard/addcard",
     "pages/userzichan/userzichan",
-    "pages/complate/complate"
+    "pages/complate/complate",
+    "pages/addProj/addProj"
   ],
   "window": {
     "navigationBarTextStyle": "black",
